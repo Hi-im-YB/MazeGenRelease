@@ -1,0 +1,739 @@
+
+==================== FINAL INTERFACE ====================
+2019-05-15 06:39:23.6161773 UTC
+
+interface MazeGen-0.0.0-7uJHoMSSXBDDo6VkBfny1k:Algorithm.Ellers 8022
+  interface hash: 612a58be1fe031caf08d30a020a57ffe
+  ABI hash: 1a6823878c1498dc1ce5c257f041def4
+  export-list hash: 9172598785de4c285d1f9bf14f23d797
+  orphan hash: 72f67792e5bb4058e8781dcab126f1b7
+  flag hash: 216975b5d4ae400c63c3c0bbab116ef7
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Algorithm.Ellers.connectBottom
+  Algorithm.Ellers.connectRight
+  Algorithm.Ellers.generate
+  Algorithm.Ellers.lastRow
+  Algorithm.Ellers.pickAtLeast1
+  Algorithm.Ellers.randBool
+module dependencies: Utils
+package dependencies: Win32-2.5.4.1 array-0.5.2.0 base-4.10.1.0
+                      containers-0.5.10.2 deepseq-1.4.3.0 ghc-prim-0.5.1.1
+                      integer-gmp-1.0.1.0 random-1.1 time-1.8.0.2
+orphans: time-1.8.0.2:Data.Time.Format.Parse
+         time-1.8.0.2:Data.Time.LocalTime.Internal.ZonedTime
+         time-1.8.0.2:Data.Time.LocalTime.Internal.LocalTime
+         time-1.8.0.2:Data.Time.Calendar.Gregorian base-4.10.1.0:GHC.Float
+         base-4.10.1.0:GHC.Base
+family instance modules: base-4.10.1.0:Control.Applicative
+                         base-4.10.1.0:Data.Complex base-4.10.1.0:Data.Either
+                         base-4.10.1.0:Data.Functor.Compose base-4.10.1.0:Data.Functor.Const
+                         base-4.10.1.0:Data.Functor.Identity
+                         base-4.10.1.0:Data.Functor.Product base-4.10.1.0:Data.Functor.Sum
+                         base-4.10.1.0:Data.List.NonEmpty base-4.10.1.0:Data.Monoid
+                         base-4.10.1.0:Data.Semigroup base-4.10.1.0:Data.Type.Equality
+                         base-4.10.1.0:Data.Version base-4.10.1.0:Data.Void
+                         base-4.10.1.0:GHC.Exts base-4.10.1.0:GHC.Generics
+                         base-4.10.1.0:GHC.IO.Exception base-4.10.1.0:GHC.TypeLits
+                         base-4.10.1.0:GHC.TypeNats containers-0.5.10.2:Data.Map.Internal
+                         containers-0.5.10.2:Data.Set.Internal
+import  -/  Utils 6e6d1082e39227c34b4e918c318d7475
+  exports: 1a346ea9081791d6cf43f670dfe87a1b
+  Coord 842d05255a7c8c04e3f4ab73978349cd
+  Graph e50ec7e0719e777fb4b2dcb5d93bb183
+  connect 1c70ff94f657230021b8bed4dfc1219a
+  start c1beddb7435d70588f052860cd449b3c
+import  -/  base-4.10.1.0:Data.Foldable 4349255461f1285ad885cd2301205c36
+import  -/  base-4.10.1.0:Data.Function 30594751fd7d03bcf4b6632902b20109
+import  -/  base-4.10.1.0:Data.List e5312e282ad78d8152090e079f862b53
+import  -/  base-4.10.1.0:Data.OldList fdea655c7bec488a3994df222c677ab7
+import  -/  base-4.10.1.0:Data.Tuple ab0c62ebfcacf00dcba54934885c5064
+import  -/  base-4.10.1.0:GHC.Base 8f949d675e49677c272f02ab7a85fe18
+import  -/  base-4.10.1.0:GHC.List 1bb0adf79553530dc898796596e53188
+import  -/  base-4.10.1.0:GHC.Num bee60808f8127e4cda82dd422aa1c6c0
+import  -/  base-4.10.1.0:Prelude a93a9400cc0c816c2ee5f39399baa7a0
+import  -/  containers-0.5.10.2:Data.Map.Internal 765cdf2fdf1dcff75ecb49b5edcb6b02
+import  -/  containers-0.5.10.2:Data.Map.Strict b15cb8b5231a69150e977b51817e845b
+import  -/  containers-0.5.10.2:Data.Map.Strict.Internal 32635857697787a75985ab2fc3e18c6d
+import  -/  ghc-prim-0.5.1.1:GHC.Classes 64ad5910d03ab188ab9b4adef7487b1e
+import  -/  random-1.1:System.Random 51fb561c639e37ae48a8c45d441a262a
+4b94d052829758994949a1d3b59e5613
+  $s$fEq(,) :: GHC.Classes.Eq (GHC.Types.Int, GHC.Types.Int)
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ (GHC.Types.Int, GHC.Types.Int)
+                  (GHC.Classes.$fEq(,)_$c==
+                     @ GHC.Types.Int
+                     @ GHC.Types.Int
+                     GHC.Classes.$fEqInt
+                     GHC.Classes.$fEqInt)
+                  (GHC.Classes.$fEq(,)_$c/=
+                     @ GHC.Types.Int
+                     @ GHC.Types.Int
+                     GHC.Classes.$fEqInt
+                     GHC.Classes.$fEqInt) -}
+d6cc56d7704ecdc0b6211762b6f6c1b1
+  $s$fOrd(,) :: GHC.Classes.Ord (GHC.Types.Int, GHC.Types.Int)
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ (GHC.Types.Int, GHC.Types.Int)
+                  Algorithm.Ellers.$s$fEq(,)
+                  (GHC.Classes.$fOrd(,)_$ccompare
+                     @ GHC.Types.Int
+                     @ GHC.Types.Int
+                     GHC.Classes.$fOrdInt
+                     GHC.Classes.$fOrdInt)
+                  (GHC.Classes.$fOrd(,)_$c<
+                     @ GHC.Types.Int
+                     @ GHC.Types.Int
+                     GHC.Classes.$fOrdInt
+                     GHC.Classes.$fOrdInt)
+                  (GHC.Classes.$fOrd(,)_$c<=
+                     @ GHC.Types.Int
+                     @ GHC.Types.Int
+                     GHC.Classes.$fOrdInt
+                     GHC.Classes.$fOrdInt)
+                  (\ (a1 :: (GHC.Types.Int, GHC.Types.Int))
+                     (b1 :: (GHC.Types.Int, GHC.Types.Int)) ->
+                   GHC.Classes.$fOrd(,)_$c<
+                     @ GHC.Types.Int
+                     @ GHC.Types.Int
+                     GHC.Classes.$fOrdInt
+                     GHC.Classes.$fOrdInt
+                     b1
+                     a1)
+                  (GHC.Classes.$fOrd(,)_$c>=
+                     @ GHC.Types.Int
+                     @ GHC.Types.Int
+                     GHC.Classes.$fOrdInt
+                     GHC.Classes.$fOrdInt)
+                  (GHC.Classes.$fOrd(,)_$cmax
+                     @ GHC.Types.Int
+                     @ GHC.Types.Int
+                     GHC.Classes.$fOrdInt
+                     GHC.Classes.$fOrdInt)
+                  (GHC.Classes.$fOrd(,)_$cmin
+                     @ GHC.Types.Int
+                     @ GHC.Types.Int
+                     GHC.Classes.$fOrdInt
+                     GHC.Classes.$fOrdInt) -}
+67888559a367349bb05c5b2b1dca5065
+  $sfromList ::
+    [((GHC.Types.Int, GHC.Types.Int), a)]
+    -> Data.Map.Internal.Map (GHC.Types.Int, GHC.Types.Int) a
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ @ a (ds :: [((GHC.Types.Int, GHC.Types.Int), a)]) ->
+                 case ds of wild {
+                   [] -> Data.Map.Internal.Tip @ (GHC.Types.Int, GHC.Types.Int) @ a
+                   : ds1 ds2
+                   -> case ds1 of wild1 { (,) kx x ->
+                      case ds2 of wild2 {
+                        []
+                        -> case x of x1 { DEFAULT ->
+                           case kx of dt { (,) ipv ipv1 ->
+                           Data.Map.Internal.Bin
+                             @ (GHC.Types.Int, GHC.Types.Int)
+                             @ a
+                             1#
+                             dt
+                             x1
+                             (Data.Map.Internal.Tip @ (GHC.Types.Int, GHC.Types.Int) @ a)
+                             (Data.Map.Internal.Tip @ (GHC.Types.Int, GHC.Types.Int) @ a) } }
+                        : ipv ipv1
+                        -> case ipv of wild3 { (,) ky ds3 ->
+                           case kx of ww { (,) ww1 ww2 ->
+                           case ky of ww3 { (,) ww4 ww5 ->
+                           case ww1 of wild4 { GHC.Types.I# x# ->
+                           case ww4 of wild5 { GHC.Types.I# y# ->
+                           case GHC.Prim.tagToEnum#
+                                  @ GHC.Types.Bool
+                                  (GHC.Prim.<# x# y#) of wild6 {
+                             GHC.Types.False
+                             -> case GHC.Prim.tagToEnum#
+                                       @ GHC.Types.Bool
+                                       (GHC.Prim.==# x# y#) of wild7 {
+                                  GHC.Types.False
+                                  -> case x of x0 { DEFAULT ->
+                                     Algorithm.Ellers.$sfromList1
+                                       @ a
+                                       (Data.Map.Internal.Bin
+                                          @ (GHC.Types.Int, GHC.Types.Int)
+                                          @ a
+                                          1#
+                                          ww
+                                          x0
+                                          (Data.Map.Internal.Tip
+                                             @ (GHC.Types.Int, GHC.Types.Int)
+                                             @ a)
+                                          (Data.Map.Internal.Tip
+                                             @ (GHC.Types.Int, GHC.Types.Int)
+                                             @ a))
+                                       wild2 }
+                                  GHC.Types.True
+                                  -> case ww2 of wild8 { GHC.Types.I# x1 ->
+                                     case ww5 of wild9 { GHC.Types.I# y ->
+                                     case GHC.Prim.tagToEnum#
+                                            @ GHC.Types.Bool
+                                            (GHC.Prim.<# x1 y) of wild10 {
+                                       GHC.Types.False
+                                       -> case x of x0 { DEFAULT ->
+                                          Algorithm.Ellers.$sfromList1
+                                            @ a
+                                            (Data.Map.Internal.Bin
+                                               @ (GHC.Types.Int, GHC.Types.Int)
+                                               @ a
+                                               1#
+                                               ww
+                                               x0
+                                               (Data.Map.Internal.Tip
+                                                  @ (GHC.Types.Int, GHC.Types.Int)
+                                                  @ a)
+                                               (Data.Map.Internal.Tip
+                                                  @ (GHC.Types.Int, GHC.Types.Int)
+                                                  @ a))
+                                            wild2 }
+                                       GHC.Types.True
+                                       -> case x of x0 { DEFAULT ->
+                                          Algorithm.Ellers.$wpoly_go8
+                                            @ a
+                                            1#
+                                            (Data.Map.Internal.Bin
+                                               @ (GHC.Types.Int, GHC.Types.Int)
+                                               @ a
+                                               1#
+                                               ww
+                                               x0
+                                               (Data.Map.Internal.Tip
+                                                  @ (GHC.Types.Int, GHC.Types.Int)
+                                                  @ a)
+                                               (Data.Map.Internal.Tip
+                                                  @ (GHC.Types.Int, GHC.Types.Int)
+                                                  @ a))
+                                            wild2 } } } } }
+                             GHC.Types.True
+                             -> case x of x0 { DEFAULT ->
+                                Algorithm.Ellers.$wpoly_go8
+                                  @ a
+                                  1#
+                                  (Data.Map.Internal.Bin
+                                     @ (GHC.Types.Int, GHC.Types.Int)
+                                     @ a
+                                     1#
+                                     ww
+                                     x0
+                                     (Data.Map.Internal.Tip @ (GHC.Types.Int, GHC.Types.Int) @ a)
+                                     (Data.Map.Internal.Tip @ (GHC.Types.Int, GHC.Types.Int) @ a))
+                                  wild2 } } } } } } } } } }) -}
+d56e398cf8e4ac090a1dd0e8d1f11968
+  $sfromList1 ::
+    Data.Map.Internal.Map (GHC.Types.Int, GHC.Types.Int) a
+    -> [((GHC.Types.Int, GHC.Types.Int), a)]
+    -> Data.Map.Internal.Map (GHC.Types.Int, GHC.Types.Int) a
+  {- Arity: 2, Strictness: <S,1*U><S,1*U> -}
+43bb1feb84e35912dadd4749f678f77c
+  $sinsert_go8 ::
+    GHC.Classes.Ord k1 =>
+    k1
+    -> a1 -> Data.Map.Internal.Map k1 a1 -> Data.Map.Internal.Map k1 a1
+  {- Arity: 4,
+     Strictness: <L,U(A,C(C1(U)),A,A,A,A,A,A)><S,1*U><S,1*U><S,1*U> -}
+f5fc47c160768115d9f76b36a8f0ca67
+  $sunion ::
+    Data.Map.Internal.Map Utils.Coord a
+    -> Data.Map.Internal.Map Utils.Coord a
+    -> Data.Map.Internal.Map Utils.Coord a
+  {- Arity: 2, Strictness: <S,1*U><S,1*U>, Inline: [~] -}
+a93f6d488a19c7269d8e63075cd11dbb
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Algorithm.Ellers.$trModule3
+                   Algorithm.Ellers.$trModule1) -}
+f2aa37bbedfcbc43941a1a5b2ddf6cc8
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Algorithm.Ellers.$trModule2) -}
+82bc5faba1a769ed8f3618e86aaa53c7
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Algorithm.Ellers"#) -}
+488f82a0e3321f6f9bcc7294d3168de1
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Algorithm.Ellers.$trModule4) -}
+6eaa123563548df39064f01811aa7801
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("MazeGen-0.0.0-7uJHoMSSXBDDo6VkBfny1k"#) -}
+970cd74895055551be244788c5cec60f
+  $wconnectBottom ::
+    System.Random.StdGen
+    -> Data.Map.Internal.Map Utils.Coord GHC.Types.Int
+    -> Utils.Graph
+    -> (# Data.Map.Internal.Map Utils.Coord GHC.Types.Int, Utils.Graph,
+          System.Random.StdGen #)
+  {- Arity: 3, Strictness: <L,U><S,1*U><L,U>, Inline: [0],
+     Unfolding: (\ (w :: System.Random.StdGen)
+                   (w1 :: Data.Map.Internal.Map Utils.Coord GHC.Types.Int)
+                   (w2 :: Utils.Graph) ->
+                 Algorithm.Ellers.$wf
+                   w
+                   (GHC.Base.map
+                      @ [(Utils.Coord, GHC.Types.Int)]
+                      @ (GHC.Types.Int, [Utils.Coord])
+                      Algorithm.Ellers.connectBottom3
+                      (Data.OldList.groupBy
+                         @ (Utils.Coord, GHC.Types.Int)
+                         Algorithm.Ellers.connectBottom2
+                         (Data.OldList.sortBy
+                            @ (Utils.Coord, GHC.Types.Int)
+                            Algorithm.Ellers.connectBottom1
+                            (Data.Map.Internal.$fDataMap_go
+                               @ (GHC.Types.Int, GHC.Types.Int)
+                               @ GHC.Types.Int
+                               (GHC.Types.[] @ ((GHC.Types.Int, GHC.Types.Int), GHC.Types.Int))
+                               w1))))
+                   (Data.Map.Internal.Tip
+                      @ (GHC.Types.Int, GHC.Types.Int)
+                      @ GHC.Types.Int)
+                   w2) -}
+658706eba9f5536624f176146048d05e
+  $wconnectRight ::
+    System.Random.StdGen
+    -> GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> Data.Map.Internal.Map Utils.Coord GHC.Types.Int
+    -> Utils.Graph
+    -> (# Data.Map.Internal.Map Utils.Coord GHC.Types.Int, Utils.Graph,
+          System.Random.StdGen #)
+  {- Arity: 5, Strictness: <L,U><S,U><L,U(U)><L,1*U><L,U>,
+     Inline: [0] -}
+142ce9c5c0cbd9a9801001f93ccd3449
+  $wf ::
+    System.Random.StdGen
+    -> [(GHC.Types.Int, [(GHC.Types.Int, GHC.Types.Int)])]
+    -> Data.Map.Internal.Map
+         (GHC.Types.Int, GHC.Types.Int) GHC.Types.Int
+    -> Utils.Graph
+    -> (# Data.Map.Internal.Map
+            (GHC.Types.Int, GHC.Types.Int) GHC.Types.Int,
+          Utils.Graph, System.Random.StdGen #)
+  {- Arity: 4, Strictness: <L,U><S,1*U><L,U><L,U>, Inline: [0] -}
+2173fbcc805267e09c3b62c6f7a9322a
+  $wgenerate ::
+    GHC.Prim.Int#
+    -> GHC.Prim.Int# -> System.Random.StdGen -> Utils.Graph
+  {- Arity: 3, Strictness: <S,U><S,U><L,U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (ww1 :: GHC.Prim.Int#)
+                   (w :: System.Random.StdGen) ->
+                 letrec {
+                   $wf1 :: System.Random.StdGen
+                           -> GHC.Prim.Int#
+                           -> GHC.Prim.Int#
+                           -> Data.Map.Internal.Map Utils.Coord GHC.Types.Int
+                           -> Utils.Graph
+                           -> Utils.Graph
+                     <join 5> {- Arity: 5, Strictness: <L,U><S,U><S,U><L,1*U><L,U>,
+                                 Inline: [0] -}
+                   = \ (w1 :: System.Random.StdGen)
+                       (ww2 :: GHC.Prim.Int#)
+                       (ww3 :: GHC.Prim.Int#)
+                       (w2 :: Data.Map.Internal.Map Utils.Coord GHC.Types.Int)
+                       (w3 :: Utils.Graph) ->
+                     case GHC.Prim.tagToEnum#
+                            @ GHC.Types.Bool
+                            (GHC.Prim.==# ww3 (GHC.Prim.-# ww1 1#)) of wild {
+                       GHC.Types.False
+                       -> let {
+                            ds :: (Data.Map.Internal.Map Utils.Coord GHC.Types.Int,
+                                   Utils.Graph, System.Random.StdGen)
+                            = case Algorithm.Ellers.$wconnectRight
+                                     w1
+                                     ww2
+                                     (GHC.Types.I# ww3)
+                                     w2
+                                     w3 of ww4 { (#,,#) ww5 ww6 ww7 ->
+                              case Algorithm.Ellers.$wf
+                                     ww7
+                                     (GHC.Base.map
+                                        @ [(Utils.Coord, GHC.Types.Int)]
+                                        @ (GHC.Types.Int, [Utils.Coord])
+                                        Algorithm.Ellers.connectBottom3
+                                        (Data.OldList.groupBy
+                                           @ (Utils.Coord, GHC.Types.Int)
+                                           Algorithm.Ellers.connectBottom2
+                                           (Data.OldList.sortBy
+                                              @ (Utils.Coord, GHC.Types.Int)
+                                              Algorithm.Ellers.connectBottom1
+                                              (Data.Map.Internal.$fDataMap_go
+                                                 @ (GHC.Types.Int, GHC.Types.Int)
+                                                 @ GHC.Types.Int
+                                                 (GHC.Types.[]
+                                                    @ ((GHC.Types.Int, GHC.Types.Int),
+                                                       GHC.Types.Int))
+                                                 ww5))))
+                                     (Data.Map.Internal.Tip
+                                        @ (GHC.Types.Int, GHC.Types.Int)
+                                        @ GHC.Types.Int)
+                                     ww6 of ww8 { (#,,#) ww9 ww10 ww11 ->
+                              (ww9, ww10, ww11) } }
+                          } in
+                          $wf1
+                            (case ds of wild1 { (,,) ident'' graph'' g'' -> g'' })
+                            ww2
+                            (GHC.Prim.+# ww3 1#)
+                            (case ds of wild1 { (,,) ident'' graph'' g'' -> ident'' })
+                            (case ds of wild1 { (,,) ident'' graph'' g'' -> graph'' })
+                       GHC.Types.True
+                       -> Algorithm.Ellers.$wlastRow ww2 (GHC.Types.I# ww3) w2 w3 }
+                 } in
+                 $wf1
+                   w
+                   ww
+                   0#
+                   (Data.Map.Internal.Tip @ Utils.Coord @ GHC.Types.Int)
+                   (Utils.$wstart ww (GHC.Types.I# ww1))) -}
+49ac72b8d139947eb1fe740cda8a5b51
+  $wlastRow ::
+    GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> Data.Map.Internal.Map Utils.Coord GHC.Types.Int
+    -> Utils.Graph
+    -> Data.Map.Internal.Map Utils.Coord [Utils.Coord]
+  {- Arity: 4, Strictness: <S,U><L,U(U)><L,1*U><S,1*U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (w :: GHC.Types.Int)
+                   (w1 :: Data.Map.Internal.Map Utils.Coord GHC.Types.Int)
+                   (w2 :: Utils.Graph) ->
+                 let {
+                   y :: GHC.Prim.Int# = GHC.Prim.-# ww 1#
+                 } in
+                 let {
+                   row :: [(GHC.Types.Int, GHC.Types.Int)]
+                   = case GHC.Prim.tagToEnum#
+                            @ GHC.Types.Bool
+                            (GHC.Prim.># 0# y) of wild {
+                       GHC.Types.False
+                       -> letrec {
+                            xs :: [GHC.Types.Int] = GHC.Types.: @ GHC.Types.Int w xs
+                          } in
+                          letrec {
+                            go1 :: GHC.Prim.Int#
+                                   -> [GHC.Types.Int] -> [(GHC.Types.Int, GHC.Types.Int)]
+                              {- Arity: 2, Strictness: <L,U><S,1*U> -}
+                            = \ (x :: GHC.Prim.Int#) (eta :: [GHC.Types.Int]) ->
+                              case eta of wild1 {
+                                [] -> GHC.Types.[] @ (GHC.Types.Int, GHC.Types.Int)
+                                : y1 ys
+                                -> GHC.Types.:
+                                     @ (GHC.Types.Int, GHC.Types.Int)
+                                     (GHC.Types.I# x, y1)
+                                     (case GHC.Prim.tagToEnum#
+                                             @ GHC.Types.Bool
+                                             (GHC.Prim.==# x y) of wild2 {
+                                        GHC.Types.False -> go1 (GHC.Prim.+# x 1#) ys
+                                        GHC.Types.True
+                                        -> GHC.Types.[] @ (GHC.Types.Int, GHC.Types.Int) }) }
+                          } in
+                          go1 0# xs
+                       GHC.Types.True -> GHC.Types.[] @ (GHC.Types.Int, GHC.Types.Int) }
+                 } in
+                 Algorithm.Ellers.generate_f
+                   row
+                   (Algorithm.Ellers.$sunion
+                      @ GHC.Types.Int
+                      w1
+                      (Algorithm.Ellers.$sfromList
+                         @ GHC.Types.Int
+                         (GHC.List.zip
+                            @ (GHC.Types.Int, GHC.Types.Int)
+                            @ GHC.Types.Int
+                            row
+                            (case w of wild1 { GHC.Types.I# y1 ->
+                             let {
+                               x1 :: GHC.Prim.Int# = GHC.Prim.*# ww y1
+                             } in
+                             let {
+                               x2 :: GHC.Prim.Int# = GHC.Prim.+# (GHC.Prim.*# ww y1) 1#
+                             } in
+                             case GHC.Prim.tagToEnum#
+                                    @ GHC.Types.Bool
+                                    (GHC.Prim.>=# x2 x1) of wild {
+                               GHC.Types.False
+                               -> GHC.Enum.efdtIntDn
+                                    x1
+                                    x2
+                                    (GHC.Prim.-# (GHC.Prim.*# ww (GHC.Prim.+# y1 1#)) 1#)
+                               GHC.Types.True
+                               -> GHC.Enum.efdtIntUp
+                                    x1
+                                    x2
+                                    (GHC.Prim.-# (GHC.Prim.*# ww (GHC.Prim.+# y1 1#)) 1#) } }))))
+                   w2) -}
+e2eaaba417c1351d68d8e4e1f2393629
+  $wpickAtLeast1 ::
+    System.Random.StdGen -> [a] -> (# [a], System.Random.StdGen #)
+  {- Arity: 2, Strictness: <L,U><S,U>, Inline: [0],
+     Unfolding: (\ @ a (w :: System.Random.StdGen) (w1 :: [a]) ->
+                 case Algorithm.Ellers.$wpoly_f
+                        @ a
+                        w1
+                        w
+                        (GHC.Types.[] @ a) of ww { (#,#) ww1 ww2 ->
+                 case ww1 of wild {
+                   []
+                   -> let {
+                        ds :: (GHC.Types.Int, System.Random.StdGen)
+                        = case GHC.List.$wlenAcc @ a w1 0# of ww3 { DEFAULT ->
+                          case System.Random.$wrandomIvalInteger
+                                 @ System.Random.StdGen
+                                 @ GHC.Types.Int
+                                 System.Random.$fRandomGenStdGen
+                                 GHC.Num.$fNumInt
+                                 Algorithm.Ellers.pickAtLeast2
+                                 (GHC.Integer.Type.smallInteger (GHC.Prim.-# ww3 1#))
+                                 ww2 of ww4 { (#,#) ww5 ww6 ->
+                          (ww5, ww6) } }
+                      } in
+                      (# GHC.Types.:
+                           @ a
+                           (case ds of wild1 { (,) index g'' -> GHC.List.!! @ a w1 index })
+                           (GHC.Types.[] @ a),
+                         case ds of wild1 { (,) index g'' -> g'' } #)
+                   : ds1 ds2 -> ww } }) -}
+f7e13114e61ac0ab1e299dba7f45c240
+  $wpoly_f ::
+    [a]
+    -> System.Random.StdGen -> [a] -> (# [a], System.Random.StdGen #)
+  {- Arity: 3, Strictness: <S,1*U><L,U><L,U>, Inline: [0] -}
+6691db45c39227868a51a1b0533ecb89
+  $wpoly_go13 ::
+    GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> Data.Map.Internal.Map (GHC.Types.Int, GHC.Types.Int) a
+    -> a
+  {- Arity: 3, Strictness: <S,U><S(S),1*U(U)><S,1*U>, Inline: [0] -}
+9c073be2ef6d4df1f272cbe88a3ff43c
+  $wpoly_go8 ::
+    GHC.Prim.Int#
+    -> Data.Map.Internal.Map (GHC.Types.Int, GHC.Types.Int) a
+    -> [((GHC.Types.Int, GHC.Types.Int), a)]
+    -> Data.Map.Internal.Map (GHC.Types.Int, GHC.Types.Int) a
+  {- Arity: 3, Strictness: <L,U><S,1*U><S,1*U>, Inline: [0] -}
+73c614027245255d7e2d721f808284b1
+  $wrandBool ::
+    System.Random.StdGen -> (# GHC.Types.Bool, System.Random.StdGen #)
+  {- Arity: 1, Strictness: <L,U>, Inline: [0],
+     Unfolding: (\ (w :: System.Random.StdGen) ->
+                 let {
+                   ds :: (GHC.Types.Int, System.Random.StdGen)
+                   = case System.Random.$wrandomIvalInteger
+                            @ System.Random.StdGen
+                            @ GHC.Types.Int
+                            System.Random.$fRandomGenStdGen
+                            GHC.Num.$fNumInt
+                            Algorithm.Ellers.pickAtLeast2
+                            Algorithm.Ellers.randBool1
+                            w of ww2 { (#,#) ww3 ww4 ->
+                     (ww3, ww4) }
+                 } in
+                 (# case ds of wild { (,) i g' ->
+                    case i of wild1 { GHC.Types.I# x ->
+                    case x of wild2 {
+                      DEFAULT -> GHC.Types.False 1# -> GHC.Types.True } } },
+                    case ds of wild { (,) i g' -> g' } #)) -}
+79fa33cc6bbb5f57f233c512b728667f
+  connectBottom ::
+    System.Random.StdGen
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> Data.Map.Internal.Map Utils.Coord GHC.Types.Int
+    -> Utils.Graph
+    -> (Data.Map.Internal.Map Utils.Coord GHC.Types.Int, Utils.Graph,
+        System.Random.StdGen)
+  {- Arity: 5, Strictness: <L,U><L,A><L,A><S,1*U><L,U>m, Inline: [0],
+     Unfolding: InlineRule (5, True, False)
+                (\ (w :: System.Random.StdGen)
+                   (w1 :: GHC.Types.Int)
+                   (w2 :: GHC.Types.Int)
+                   (w3 :: Data.Map.Internal.Map Utils.Coord GHC.Types.Int)
+                   (w4 :: Utils.Graph) ->
+                 case Algorithm.Ellers.$wconnectBottom
+                        w
+                        w3
+                        w4 of ww { (#,,#) ww1 ww2 ww3 ->
+                 (ww1, ww2, ww3) }) -}
+e186523c2018363cfd7b8e2c6741cc89
+  connectBottom1 ::
+    (Utils.Coord, GHC.Types.Int)
+    -> (Utils.Coord, GHC.Types.Int) -> GHC.Types.Ordering
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(LS(S)),1*U(A,1*U(U))><S(LS(S)),1*U(A,1*U(U))>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (x :: (Utils.Coord, GHC.Types.Int))
+                   (y :: (Utils.Coord, GHC.Types.Int))[OneShot] ->
+                 case x of wild { (,) ds1 y1 ->
+                 case y1 of wild1 { GHC.Types.I# x# ->
+                 case y of wild2 { (,) ds2 y2 ->
+                 case y2 of wild3 { GHC.Types.I# y# ->
+                 GHC.Classes.compareInt# x# y# } } } }) -}
+8dee75bb017a24cce5c7a637bc9c49e7
+  connectBottom2 ::
+    (Utils.Coord, GHC.Types.Int)
+    -> (Utils.Coord, GHC.Types.Int) -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(LS(S)),1*U(A,1*U(U))><S(LS(S)),1*U(A,1*U(U))>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (x :: (Utils.Coord, GHC.Types.Int))
+                   (y :: (Utils.Coord, GHC.Types.Int)) ->
+                 case x of wild { (,) ds1 y1 ->
+                 case y of wild1 { (,) ds2 y2 -> GHC.Classes.eqInt y1 y2 } }) -}
+ec4edd4ae2ece0b59603a3ca85ad69f7
+  connectBottom3 ::
+    [(Utils.Coord, GHC.Types.Int)] -> (GHC.Types.Int, [Utils.Coord])
+  {- Arity: 1, Strictness: <S,1*U>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: [(Utils.Coord, GHC.Types.Int)]) ->
+                 case ds of wild {
+                   [] -> Algorithm.Ellers.connectBottom4
+                   : ds1 xs
+                   -> case ds1 of wild1 { (,) a k ->
+                      (k,
+                       GHC.Types.:
+                         @ Utils.Coord
+                         a
+                         (GHC.Base.build
+                            @ (GHC.Types.Int, GHC.Types.Int)
+                            (\ @ b1
+                               (c :: (GHC.Types.Int, GHC.Types.Int) -> b1 -> b1)[OneShot]
+                               (n :: b1)[OneShot] ->
+                             GHC.Base.foldr
+                               @ (Utils.Coord, GHC.Types.Int)
+                               @ b1
+                               (GHC.Base.mapFB
+                                  @ (GHC.Types.Int, GHC.Types.Int)
+                                  @ b1
+                                  @ (Utils.Coord, GHC.Types.Int)
+                                  c
+                                  (Data.Tuple.fst @ Utils.Coord @ GHC.Types.Int))
+                               n
+                               xs))) } }) -}
+f8800d5ecf331ce732503755e7a08eef
+  connectBottom4 :: (GHC.Types.Int, [Utils.Coord])
+  {- Strictness: x -}
+0c2e086f549804a0d1615c002e076a42
+  connectRight ::
+    System.Random.StdGen
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> Data.Map.Internal.Map Utils.Coord GHC.Types.Int
+    -> Utils.Graph
+    -> (Data.Map.Internal.Map Utils.Coord GHC.Types.Int, Utils.Graph,
+        System.Random.StdGen)
+  {- Arity: 5, Strictness: <L,U><S(S),1*U(U)><L,U(U)><L,1*U><L,U>m,
+     Inline: [0],
+     Unfolding: InlineRule (5, True, False)
+                (\ (w :: System.Random.StdGen)
+                   (w1 :: GHC.Types.Int)
+                   (w2 :: GHC.Types.Int)
+                   (w3 :: Data.Map.Internal.Map Utils.Coord GHC.Types.Int)
+                   (w4 :: Utils.Graph) ->
+                 case w1 of ww { GHC.Types.I# ww1 ->
+                 case Algorithm.Ellers.$wconnectRight
+                        w
+                        ww1
+                        w2
+                        w3
+                        w4 of ww2 { (#,,#) ww3 ww4 ww5 ->
+                 (ww3, ww4, ww5) } }) -}
+00176e4d1a85152cb373ab178e6146ba
+  generate :: Utils.Coord -> System.Random.StdGen -> Utils.Graph
+  {- Arity: 2, Strictness: <S(S(S)S(S)),1*U(1*U(U),1*U(U))><L,U>,
+     Inline: [0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Utils.Coord) (w1 :: System.Random.StdGen) ->
+                 case w of ww { (,) ww1 ww2 ->
+                 case ww1 of ww3 { GHC.Types.I# ww4 ->
+                 case ww2 of ww5 { GHC.Types.I# ww6 ->
+                 Algorithm.Ellers.$wgenerate ww4 ww6 w1 } } }) -}
+97de878af5b9d3d01a528059606a2983
+  generate_f ::
+    [(GHC.Types.Int, GHC.Types.Int)]
+    -> Data.Map.Internal.Map
+         (GHC.Types.Int, GHC.Types.Int) GHC.Types.Int
+    -> Data.Map.Internal.Map Utils.Coord [Utils.Coord]
+    -> Data.Map.Internal.Map Utils.Coord [Utils.Coord]
+  {- Arity: 3, Strictness: <S,1*U><L,U><S,1*U> -}
+bf4c2004443e78dacf35061b96df5964
+  lastRow ::
+    GHC.Types.Int
+    -> GHC.Types.Int
+    -> Data.Map.Internal.Map Utils.Coord GHC.Types.Int
+    -> Utils.Graph
+    -> Utils.Graph
+  {- Arity: 4, Strictness: <S(S),1*U(U)><L,U(U)><L,1*U><S,1*U>,
+     Inline: [0],
+     Unfolding: InlineRule (4, True, False)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: GHC.Types.Int)
+                   (w2 :: Data.Map.Internal.Map Utils.Coord GHC.Types.Int)
+                   (w3 :: Utils.Graph) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 Algorithm.Ellers.$wlastRow ww1 w1 w2 w3 }) -}
+d6225098ca7eae8f6addc74bb07a6eda
+  pickAtLeast1 ::
+    System.Random.StdGen -> [a] -> ([a], System.Random.StdGen)
+  {- Arity: 2, Strictness: <L,U><S,U>m, Inline: [0],
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a (w :: System.Random.StdGen) (w1 :: [a]) ->
+                 case Algorithm.Ellers.$wpickAtLeast1
+                        @ a
+                        w
+                        w1 of ww { (#,#) ww1 ww2 ->
+                 (ww1, ww2) }) -}
+1f6dc9170592dc59e44b7a8818d6e167
+  pickAtLeast2 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (0) -}
+fb7d0dbf4ad70ddcde66dc7e1f4e3ce1
+  randBool ::
+    System.Random.StdGen -> (GHC.Types.Bool, System.Random.StdGen)
+  {- Arity: 1, Strictness: <L,U>m, Inline: [0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: System.Random.StdGen) ->
+                 case Algorithm.Ellers.$wrandBool w of ww { (#,#) ww1 ww2 ->
+                 (ww1, ww2) }) -}
+29edbb539b2a6d467c326ba7da9512a0
+  randBool1 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (1) -}
+"SPEC/Algorithm.Ellers $fEq(,) @ Int @ Int" [orphan] forall (v1 :: GHC.Classes.Eq
+                                                                     GHC.Types.Int)
+                                                            (v :: GHC.Classes.Eq GHC.Types.Int)
+  GHC.Classes.$fEq(,) @ GHC.Types.Int @ GHC.Types.Int v v1
+  = Algorithm.Ellers.$s$fEq(,)
+"SPEC/Algorithm.Ellers $fOrd(,) @ Int @ Int" [orphan] forall (v1 :: GHC.Classes.Ord
+                                                                      GHC.Types.Int)
+                                                             (v :: GHC.Classes.Ord GHC.Types.Int)
+  GHC.Classes.$fOrd(,) @ GHC.Types.Int @ GHC.Types.Int v v1
+  = Algorithm.Ellers.$s$fOrd(,)
+"SPEC/Algorithm.Ellers fromList @ (Int, Int) _" [orphan] forall @ a
+                                                                ($dOrd :: GHC.Classes.Ord
+                                                                            (GHC.Types.Int,
+                                                                             GHC.Types.Int))
+  Data.Map.Strict.Internal.fromList @ (GHC.Types.Int, GHC.Types.Int)
+                                    @ a
+                                    $dOrd
+  = Algorithm.Ellers.$sfromList @ a
+"SPEC/Algorithm.Ellers union @ Coord _" [orphan] forall @ a
+                                                        ($dOrd :: GHC.Classes.Ord Utils.Coord)
+  Data.Map.Internal.union @ (GHC.Types.Int, GHC.Types.Int) @ a $dOrd
+  = Algorithm.Ellers.$sunion @ a
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

@@ -1,0 +1,383 @@
+
+==================== FINAL INTERFACE ====================
+2019-05-15 06:39:20.830368 UTC
+
+interface MazeGen-0.0.0-7uJHoMSSXBDDo6VkBfny1k:Algorithm.Kruskals 8022
+  interface hash: 6d76783a4387660578b095a3ba48eb30
+  ABI hash: c510702fea6148a876e6702fc5beb7d8
+  export-list hash: c8ecca938ff58621190a4eebc663a651
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 216975b5d4ae400c63c3c0bbab116ef7
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Algorithm.Kruskals.createSets
+  Algorithm.Kruskals.genEdges
+  Algorithm.Kruskals.generate
+module dependencies: Utils
+package dependencies: Win32-2.5.4.1 array-0.5.2.0 base-4.10.1.0
+                      containers-0.5.10.2 deepseq-1.4.3.0 disjoint-set-0.2
+                      ghc-prim-0.5.1.1 integer-gmp-1.0.1.0 mtl-2.2.2 random-1.1
+                      time-1.8.0.2 transformers-0.5.2.0
+orphans: time-1.8.0.2:Data.Time.Format.Parse
+         time-1.8.0.2:Data.Time.LocalTime.Internal.ZonedTime
+         time-1.8.0.2:Data.Time.LocalTime.Internal.LocalTime
+         time-1.8.0.2:Data.Time.Calendar.Gregorian
+         transformers-0.5.2.0:Control.Monad.Trans.Error
+         base-4.10.1.0:GHC.Float base-4.10.1.0:GHC.Base
+family instance modules: base-4.10.1.0:Control.Applicative
+                         base-4.10.1.0:Data.Complex base-4.10.1.0:Data.Either
+                         base-4.10.1.0:Data.Functor.Compose base-4.10.1.0:Data.Functor.Const
+                         base-4.10.1.0:Data.Functor.Identity
+                         base-4.10.1.0:Data.Functor.Product base-4.10.1.0:Data.Functor.Sum
+                         base-4.10.1.0:Data.List.NonEmpty base-4.10.1.0:Data.Monoid
+                         base-4.10.1.0:Data.Semigroup base-4.10.1.0:Data.Type.Equality
+                         base-4.10.1.0:Data.Version base-4.10.1.0:Data.Void
+                         base-4.10.1.0:GHC.Exts base-4.10.1.0:GHC.Generics
+                         base-4.10.1.0:GHC.IO.Exception base-4.10.1.0:GHC.TypeLits
+                         base-4.10.1.0:GHC.TypeNats containers-0.5.10.2:Data.IntMap.Internal
+                         containers-0.5.10.2:Data.IntSet.Internal
+                         containers-0.5.10.2:Data.Map.Internal
+                         containers-0.5.10.2:Data.Set.Internal
+import  -/  Utils 6e6d1082e39227c34b4e918c318d7475
+  exports: 1a346ea9081791d6cf43f670dfe87a1b
+  Coord 842d05255a7c8c04e3f4ab73978349cd
+  Graph e50ec7e0719e777fb4b2dcb5d93bb183
+  connect 1c70ff94f657230021b8bed4dfc1219a
+  neighbors 5cdf11a40be1c73f2cb36f68dfc7516e
+  shuffle 43c56380d7f9a856730cf41c61b9279f
+  start c1beddb7435d70588f052860cd449b3c
+import  -/  array-0.5.2.0:Data.Array 869b69aac66df5e34601dac3d3170393
+import  -/  base-4.10.1.0:Data.Tuple ab0c62ebfcacf00dcba54934885c5064
+import  -/  base-4.10.1.0:GHC.Arr 80cd02c1e00d7b9b0ac8f460e89b2871
+import  -/  base-4.10.1.0:GHC.Base 8f949d675e49677c272f02ab7a85fe18
+import  -/  base-4.10.1.0:GHC.Num bee60808f8127e4cda82dd422aa1c6c0
+import  -/  base-4.10.1.0:Prelude a93a9400cc0c816c2ee5f39399baa7a0
+import  -/  disjoint-set-0.2:Data.IntDisjointSet 5d6b329356b2de80e7b165fef33eacec
+import  -/  random-1.1:System.Random 51fb561c639e37ae48a8c45d441a262a
+039b1d24a38320f6d32f2e1bd12e25e3
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Algorithm.Kruskals.$trModule3
+                   Algorithm.Kruskals.$trModule1) -}
+c54eb8aa723f1d62d240c23c26967f0d
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Algorithm.Kruskals.$trModule2) -}
+b24b3897d559bc6a89b93bdcf3630a7e
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Algorithm.Kruskals"#) -}
+450bb0344737d27af6c13250f1e5f3ff
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Algorithm.Kruskals.$trModule4) -}
+56b2245e3d9c54e5688932c0d26fb8b4
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("MazeGen-0.0.0-7uJHoMSSXBDDo6VkBfny1k"#) -}
+1fbbdd0212e9433ec5d58a91f6853c00
+  $wcreateSets ::
+    GHC.Types.Int
+    -> GHC.Types.Int
+    -> (# Data.IntDisjointSet.IntDisjointSet,
+          GHC.Arr.Array Utils.Coord GHC.Types.Int #)
+  {- Arity: 2, Strictness: <L,U(U)><L,U(U)>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Types.Int) (ww1 :: GHC.Types.Int) ->
+                 (# case ww of wild { GHC.Types.I# x ->
+                    case ww1 of wild1 { GHC.Types.I# y ->
+                    let {
+                      y1 :: GHC.Prim.Int# = GHC.Prim.-# (GHC.Prim.*# x y) 1#
+                    } in
+                    case GHC.Prim.tagToEnum#
+                           @ GHC.Types.Bool
+                           (GHC.Prim.># 0# y1) of wild2 {
+                      GHC.Types.False
+                      -> letrec {
+                           go :: GHC.Prim.Int# -> [(GHC.Types.Int, GHC.Types.Int)]
+                             {- Arity: 1, Strictness: <L,U> -}
+                           = \ (x1 :: GHC.Prim.Int#) ->
+                             let {
+                               ds :: GHC.Types.Int = GHC.Types.I# x1
+                             } in
+                             GHC.Types.:
+                               @ (GHC.Types.Int, GHC.Types.Int)
+                               (ds, ds)
+                               (case GHC.Prim.tagToEnum#
+                                       @ GHC.Types.Bool
+                                       (GHC.Prim.==# x1 y1) of wild3 {
+                                  GHC.Types.False -> go (GHC.Prim.+# x1 1#)
+                                  GHC.Types.True -> GHC.Types.[] @ (GHC.Types.Int, GHC.Types.Int) })
+                         } in
+                         Data.IntDisjointSet.fromList (go 0#)
+                      GHC.Types.True -> Algorithm.Kruskals.createSets2 } } },
+                    case GHC.Magic.runRW#
+                           @ ('GHC.Types.TupleRep
+                                '['GHC.Types.TupleRep '[], 'GHC.Types.LiftedRep])
+                           @ (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                GHC.Arr.Array (GHC.Types.Int, GHC.Types.Int) GHC.Types.Int #)
+                           (\ (s1# :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                            case ww of wild { GHC.Types.I# x ->
+                            let {
+                              u :: GHC.Types.Int
+                              = case ww1 of wild1 { GHC.Types.I# x1 ->
+                                GHC.Types.I# (GHC.Prim.-# x1 1#) }
+                            } in
+                            let {
+                              ww12 :: GHC.Prim.Int# = GHC.Prim.-# x 1#
+                            } in
+                            let {
+                              lvl :: GHC.Types.Int = GHC.Types.I# ww12
+                            } in
+                            let {
+                              lvl1 :: (GHC.Types.Int, GHC.Types.Int) = (lvl, u)
+                            } in
+                            let {
+                              $j :: GHC.Prim.Int#
+                                    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                          GHC.Arr.Array
+                                            (GHC.Types.Int, GHC.Types.Int) GHC.Types.Int #)
+                                <join 1> {- Arity: 1, Strictness: <S,U> -}
+                              = \ (x1 :: GHC.Prim.Int#)[OneShot] ->
+                                case GHC.Prim.tagToEnum#
+                                       @ GHC.Types.Bool
+                                       (GHC.Prim.<# x1 0#) of wild1 {
+                                  GHC.Types.False
+                                  -> case GHC.Prim.newArray#
+                                            @ GHC.Types.Int
+                                            @ GHC.Prim.RealWorld
+                                            x1
+                                            (GHC.Arr.arrEleBottom @ GHC.Types.Int)
+                                            s1# of ds1 { (#,#) ipv ipv1 ->
+                                     case x1 of wild2 {
+                                       DEFAULT
+                                       -> letrec {
+                                            go :: GHC.Prim.Int#
+                                                  -> GHC.Prim.Int#
+                                                  -> GHC.Prim.State# GHC.Prim.RealWorld
+                                                  -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                                        GHC.Arr.Array
+                                                          (GHC.Types.Int, GHC.Types.Int)
+                                                          GHC.Types.Int #)
+                                              <join 3> {- Arity: 3, Strictness: <L,U><S,U><S,U> -}
+                                            = \ (x2 :: GHC.Prim.Int#)
+                                                (eta :: GHC.Prim.Int#)
+                                                (eta1 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                                              case GHC.Prim.writeArray#
+                                                     @ GHC.Prim.RealWorld
+                                                     @ GHC.Types.Int
+                                                     ipv1
+                                                     eta
+                                                     (GHC.Types.I# x2)
+                                                     eta1 of s4# { DEFAULT ->
+                                              case GHC.Prim.tagToEnum#
+                                                     @ GHC.Types.Bool
+                                                     (GHC.Prim.==#
+                                                        eta
+                                                        (GHC.Prim.-# wild2 1#)) of wild4 {
+                                                GHC.Types.False
+                                                -> case x2 of wild3 {
+                                                     DEFAULT
+                                                     -> go
+                                                          (GHC.Prim.+# wild3 1#)
+                                                          (GHC.Prim.+# eta 1#)
+                                                          s4#
+                                                     9223372036854775807#
+                                                     -> case GHC.Prim.unsafeFreezeArray#
+                                                               @ GHC.Prim.RealWorld
+                                                               @ GHC.Types.Int
+                                                               ipv1
+                                                               s4# of ds2 { (#,#) ipv2 ipv3 ->
+                                                        (# ipv2,
+                                                           GHC.Arr.Array
+                                                             @ (GHC.Types.Int, GHC.Types.Int)
+                                                             @ GHC.Types.Int
+                                                             Algorithm.Kruskals.createSets_l
+                                                             lvl1
+                                                             wild2
+                                                             ipv3 #) } }
+                                                GHC.Types.True
+                                                -> case GHC.Prim.unsafeFreezeArray#
+                                                          @ GHC.Prim.RealWorld
+                                                          @ GHC.Types.Int
+                                                          ipv1
+                                                          s4# of ds2 { (#,#) ipv2 ipv3 ->
+                                                   (# ipv2,
+                                                      GHC.Arr.Array
+                                                        @ (GHC.Types.Int, GHC.Types.Int)
+                                                        @ GHC.Types.Int
+                                                        Algorithm.Kruskals.createSets_l
+                                                        lvl1
+                                                        wild2
+                                                        ipv3 #) } } }
+                                          } in
+                                          go 0# 0# ipv
+                                       0#
+                                       -> case GHC.Prim.unsafeFreezeArray#
+                                                 @ GHC.Prim.RealWorld
+                                                 @ GHC.Types.Int
+                                                 ipv1
+                                                 ipv of ds2 { (#,#) ipv2 ipv3 ->
+                                          (# ipv2,
+                                             GHC.Arr.Array
+                                               @ (GHC.Types.Int, GHC.Types.Int)
+                                               @ GHC.Types.Int
+                                               Algorithm.Kruskals.createSets_l
+                                               lvl1
+                                               0#
+                                               ipv3 #) } } }
+                                  GHC.Types.True
+                                  -> case GHC.Arr.negRange
+                                     ret_ty (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                               GHC.Arr.Array
+                                                 (GHC.Types.Int, GHC.Types.Int) GHC.Types.Int #)
+                                     of {} }
+                            } in
+                            case GHC.Prim.tagToEnum#
+                                   @ GHC.Types.Bool
+                                   (GHC.Prim.<=# 0# ww12) of wild1 {
+                              GHC.Types.False -> $j 0#
+                              GHC.Types.True
+                              -> case u of wild2 { GHC.Types.I# n ->
+                                 case GHC.Prim.tagToEnum#
+                                        @ GHC.Types.Bool
+                                        (GHC.Prim.<=# 0# n) of wild3 {
+                                   GHC.Types.False -> $j 0#
+                                   GHC.Types.True
+                                   -> $j
+                                        (GHC.Prim.+#
+                                           (GHC.Prim.+# (GHC.Prim.*# ww12 (GHC.Prim.+# n 1#)) n)
+                                           1#) } } } }) of ds1 { (#,#) ipv ipv1 ->
+                    ipv1 } #)) -}
+6f8570fe57baf178f4315cbd461cc81b
+  $wgenEdges ::
+    GHC.Prim.Int# -> GHC.Types.Int -> [(Utils.Coord, Utils.Coord)]
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,U><L,1*U(U)>,
+     Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#) (ww1 :: GHC.Types.Int) ->
+                 let {
+                   y :: GHC.Prim.Int# = GHC.Prim.-# ww 1#
+                 } in
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.># 0# y) of wild {
+                   GHC.Types.False
+                   -> case ww1 of wild1 { GHC.Types.I# x ->
+                      let {
+                        lvl :: [GHC.Types.Int] = GHC.Enum.eftInt 0# (GHC.Prim.-# x 1#)
+                      } in
+                      let {
+                        wild2 :: GHC.Types.Int = GHC.Types.I# ww
+                      } in
+                      letrec {
+                        go :: GHC.Prim.Int#
+                              -> [((GHC.Types.Int, GHC.Types.Int), Utils.Coord)]
+                          {- Arity: 1, Strictness: <L,U> -}
+                        = \ (x1 :: GHC.Prim.Int#) ->
+                          let {
+                            ds :: GHC.Types.Int = GHC.Types.I# x1
+                          } in
+                          let {
+                            z :: [((GHC.Types.Int, GHC.Types.Int), Utils.Coord)]
+                            = case GHC.Prim.tagToEnum#
+                                     @ GHC.Types.Bool
+                                     (GHC.Prim.==# x1 y) of wild3 {
+                                GHC.Types.False -> go (GHC.Prim.+# x1 1#)
+                                GHC.Types.True
+                                -> GHC.Types.[] @ ((GHC.Types.Int, GHC.Types.Int), Utils.Coord) }
+                          } in
+                          letrec {
+                            go1 :: [GHC.Types.Int]
+                                   -> [((GHC.Types.Int, GHC.Types.Int), Utils.Coord)]
+                              {- Arity: 1, Strictness: <S,1*U> -}
+                            = \ (ds1 :: [GHC.Types.Int]) ->
+                              case ds1 of wild3 {
+                                [] -> z
+                                : y1 ys
+                                -> let {
+                                     ds2 :: (GHC.Types.Int, GHC.Types.Int) = (ds, y1)
+                                   } in
+                                   let {
+                                     z1 :: [((GHC.Types.Int, GHC.Types.Int), Utils.Coord)] = go1 ys
+                                   } in
+                                   letrec {
+                                     go2 :: [(GHC.Types.Int, GHC.Types.Int)]
+                                            -> [((GHC.Types.Int, GHC.Types.Int), Utils.Coord)]
+                                       {- Arity: 1, Strictness: <S,1*U> -}
+                                     = \ (ds3 :: [(GHC.Types.Int, GHC.Types.Int)]) ->
+                                       case ds3 of wild4 {
+                                         [] -> z1
+                                         : y2 ys1
+                                         -> GHC.Types.:
+                                              @ ((GHC.Types.Int, GHC.Types.Int), Utils.Coord)
+                                              (ds2, y2)
+                                              (go2 ys1) }
+                                   } in
+                                   go2 (Utils.$wneighbors wild2 wild1 x1 y1) }
+                          } in
+                          go1 lvl
+                      } in
+                      go 0# }
+                   GHC.Types.True
+                   -> GHC.Types.[]
+                        @ ((GHC.Types.Int, GHC.Types.Int), Utils.Coord) }) -}
+08ff6047026cda2c63f60c3a3b27011a
+  $wgenerate ::
+    GHC.Prim.Int#
+    -> GHC.Types.Int -> System.Random.StdGen -> Utils.Graph
+  {- Arity: 3, Strictness: <S,U><L,U(U)><L,U>, Inline: [0] -}
+c1a7a1318182c52522ee89242064aba2
+  createSets ::
+    Utils.Coord
+    -> (Data.IntDisjointSet.IntDisjointSet,
+        GHC.Arr.Array Utils.Coord GHC.Types.Int)
+  {- Arity: 1, Strictness: <S,1*U(U(U),U(U))>m, Inline: [0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: Utils.Coord) ->
+                 case w of ww { (,) ww1 ww2 ->
+                 case Algorithm.Kruskals.$wcreateSets
+                        ww1
+                        ww2 of ww3 { (#,#) ww4 ww5 ->
+                 (ww4, ww5) } }) -}
+a729cd4831b8c46b6bf8bc2e3b7c7aa8
+  createSets1 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
+8402368b41f0de55b65d2e8c8463917b
+  createSets2 :: Data.IntDisjointSet.IntDisjointSet
+  {- Unfolding: (Data.IntDisjointSet.fromList
+                   (GHC.Types.[] @ (GHC.Types.Int, GHC.Types.Int))) -}
+e6c551eec218fcbdcff207b3ba5ceb3a
+  createSets_l :: (GHC.Types.Int, GHC.Types.Int)
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: ((Algorithm.Kruskals.createSets1,
+                  Algorithm.Kruskals.createSets1)) -}
+428e9d600c7acaae91b5421839558e3e
+  genEdges :: Utils.Coord -> [(Utils.Coord, Utils.Coord)]
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(S(S)L),1*U(1*U(U),1*U(U))>, Inline: [0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: Utils.Coord) ->
+                 case w of ww { (,) ww1 ww2 ->
+                 case ww1 of ww3 { GHC.Types.I# ww4 ->
+                 Algorithm.Kruskals.$wgenEdges ww4 ww2 } }) -}
+f19f73a3b4d7eec0e60d523b5e927739
+  generate ::
+    (GHC.Types.Int, GHC.Types.Int)
+    -> System.Random.StdGen -> Utils.Graph
+  {- Arity: 2, Strictness: <S(S(S)L),1*U(1*U(U),U(U))><L,U>,
+     Inline: [0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: (GHC.Types.Int, GHC.Types.Int))
+                   (w1 :: System.Random.StdGen) ->
+                 case w of ww { (,) ww1 ww2 ->
+                 case ww1 of ww3 { GHC.Types.I# ww4 ->
+                 Algorithm.Kruskals.$wgenerate ww4 ww2 w1 } }) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

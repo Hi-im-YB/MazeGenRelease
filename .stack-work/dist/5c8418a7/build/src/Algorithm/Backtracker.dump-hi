@@ -1,0 +1,182 @@
+
+==================== FINAL INTERFACE ====================
+2019-05-15 06:39:24.4410219 UTC
+
+interface MazeGen-0.0.0-7uJHoMSSXBDDo6VkBfny1k:Algorithm.Backtracker 8022
+  interface hash: 80cacaa24ea99f0c88d628d4fee5cc9b
+  ABI hash: ead5780953c2cb9a34ad412b1e201831
+  export-list hash: 34b5ff22a122e0a2fe9077a5b1ced54f
+  orphan hash: ddd1c057cced47ed88abaf20dbd37fcb
+  flag hash: 216975b5d4ae400c63c3c0bbab116ef7
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Algorithm.Backtracker.generate
+module dependencies: Utils
+package dependencies: Win32-2.5.4.1 array-0.5.2.0 base-4.10.1.0
+                      containers-0.5.10.2 deepseq-1.4.3.0 ghc-prim-0.5.1.1
+                      integer-gmp-1.0.1.0 random-1.1 time-1.8.0.2
+orphans: time-1.8.0.2:Data.Time.Format.Parse
+         time-1.8.0.2:Data.Time.LocalTime.Internal.ZonedTime
+         time-1.8.0.2:Data.Time.LocalTime.Internal.LocalTime
+         time-1.8.0.2:Data.Time.Calendar.Gregorian base-4.10.1.0:GHC.Float
+         base-4.10.1.0:GHC.Base
+family instance modules: base-4.10.1.0:Control.Applicative
+                         base-4.10.1.0:Data.Complex base-4.10.1.0:Data.Either
+                         base-4.10.1.0:Data.Functor.Compose base-4.10.1.0:Data.Functor.Const
+                         base-4.10.1.0:Data.Functor.Identity
+                         base-4.10.1.0:Data.Functor.Product base-4.10.1.0:Data.Functor.Sum
+                         base-4.10.1.0:Data.List.NonEmpty base-4.10.1.0:Data.Monoid
+                         base-4.10.1.0:Data.Semigroup base-4.10.1.0:Data.Type.Equality
+                         base-4.10.1.0:Data.Version base-4.10.1.0:Data.Void
+                         base-4.10.1.0:GHC.Exts base-4.10.1.0:GHC.Generics
+                         base-4.10.1.0:GHC.IO.Exception base-4.10.1.0:GHC.TypeLits
+                         base-4.10.1.0:GHC.TypeNats containers-0.5.10.2:Data.Map.Internal
+                         containers-0.5.10.2:Data.Set.Internal
+import  -/  Utils 6e6d1082e39227c34b4e918c318d7475
+  exports: 1a346ea9081791d6cf43f670dfe87a1b
+  Graph e50ec7e0719e777fb4b2dcb5d93bb183
+  connect 1c70ff94f657230021b8bed4dfc1219a
+  neighbors 5cdf11a40be1c73f2cb36f68dfc7516e
+  sample ff511aaa26233e630e42b88918d649a9
+  start c1beddb7435d70588f052860cd449b3c
+import  -/  base-4.10.1.0:Data.Foldable 4349255461f1285ad885cd2301205c36
+import  -/  base-4.10.1.0:GHC.Base 8f949d675e49677c272f02ab7a85fe18
+import  -/  base-4.10.1.0:GHC.List 1bb0adf79553530dc898796596e53188
+import  -/  base-4.10.1.0:GHC.Num bee60808f8127e4cda82dd422aa1c6c0
+import  -/  base-4.10.1.0:Prelude a93a9400cc0c816c2ee5f39399baa7a0
+import  -/  containers-0.5.10.2:Data.Set 7773c3ea4eb5302461702acb1f1cb916
+import  -/  containers-0.5.10.2:Data.Set.Internal 2c0ebe68524799feb2ddd690bca723f0
+import  -/  random-1.1:System.Random 51fb561c639e37ae48a8c45d441a262a
+100ccf569137be54ba17579b795e76c8
+  $s$fEq(,) :: GHC.Classes.Eq (GHC.Types.Int, GHC.Types.Int)
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ (GHC.Types.Int, GHC.Types.Int)
+                  (GHC.Classes.$fEq(,)_$c==
+                     @ GHC.Types.Int
+                     @ GHC.Types.Int
+                     GHC.Classes.$fEqInt
+                     GHC.Classes.$fEqInt)
+                  (GHC.Classes.$fEq(,)_$c/=
+                     @ GHC.Types.Int
+                     @ GHC.Types.Int
+                     GHC.Classes.$fEqInt
+                     GHC.Classes.$fEqInt) -}
+33a2287005cf9544dc355536c0250573
+  $s$fOrd(,) :: GHC.Classes.Ord (GHC.Types.Int, GHC.Types.Int)
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ (GHC.Types.Int, GHC.Types.Int)
+                  Algorithm.Backtracker.$s$fEq(,)
+                  (GHC.Classes.$fOrd(,)_$ccompare
+                     @ GHC.Types.Int
+                     @ GHC.Types.Int
+                     GHC.Classes.$fOrdInt
+                     GHC.Classes.$fOrdInt)
+                  (GHC.Classes.$fOrd(,)_$c<
+                     @ GHC.Types.Int
+                     @ GHC.Types.Int
+                     GHC.Classes.$fOrdInt
+                     GHC.Classes.$fOrdInt)
+                  (GHC.Classes.$fOrd(,)_$c<=
+                     @ GHC.Types.Int
+                     @ GHC.Types.Int
+                     GHC.Classes.$fOrdInt
+                     GHC.Classes.$fOrdInt)
+                  (\ (a1 :: (GHC.Types.Int, GHC.Types.Int))
+                     (b1 :: (GHC.Types.Int, GHC.Types.Int)) ->
+                   GHC.Classes.$fOrd(,)_$c<
+                     @ GHC.Types.Int
+                     @ GHC.Types.Int
+                     GHC.Classes.$fOrdInt
+                     GHC.Classes.$fOrdInt
+                     b1
+                     a1)
+                  (GHC.Classes.$fOrd(,)_$c>=
+                     @ GHC.Types.Int
+                     @ GHC.Types.Int
+                     GHC.Classes.$fOrdInt
+                     GHC.Classes.$fOrdInt)
+                  (GHC.Classes.$fOrd(,)_$cmax
+                     @ GHC.Types.Int
+                     @ GHC.Types.Int
+                     GHC.Classes.$fOrdInt
+                     GHC.Classes.$fOrdInt)
+                  (GHC.Classes.$fOrd(,)_$cmin
+                     @ GHC.Types.Int
+                     @ GHC.Types.Int
+                     GHC.Classes.$fOrdInt
+                     GHC.Classes.$fOrdInt) -}
+9421191eb4e0f8ca488953982c3ea0ee
+  $sinsert_go3 ::
+    GHC.Classes.Ord a1 =>
+    a1 -> a1 -> Data.Set.Internal.Set a1 -> Data.Set.Internal.Set a1
+  {- Arity: 4,
+     Strictness: <L,U(A,C(C1(U)),A,A,A,A,A,A)><L,U><S,1*U><S,1*U> -}
+e2904f210dd38179ebcc6337485e4e89
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Algorithm.Backtracker.$trModule3
+                   Algorithm.Backtracker.$trModule1) -}
+756f1e632c62673679b70a6fba02b68e
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Algorithm.Backtracker.$trModule2) -}
+cf3c4addea7c5b9c29e456a84d3410f0
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Algorithm.Backtracker"#) -}
+ce6dc12af0d669d7ae26d21dc2676d72
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Algorithm.Backtracker.$trModule4) -}
+98f8c4fda3f52241f0c4479fa2c19e55
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("MazeGen-0.0.0-7uJHoMSSXBDDo6VkBfny1k"#) -}
+18ae11a5ffbb2895477ac4095bfabae5
+  $wgenerate ::
+    GHC.Prim.Int#
+    -> GHC.Types.Int -> System.Random.StdGen -> Utils.Graph
+  {- Arity: 3, Strictness: <S,U><L,U(U)><L,U>, Inline: [0] -}
+91444d24e60c643ab58e4702aa0be26f
+  $wgo3 ::
+    GHC.Types.Int
+    -> GHC.Types.Int
+    -> Data.Set.Internal.Set Utils.Coord
+    -> GHC.Types.Bool
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,1*U(U)><L,1*U(U)><S,1*U>,
+     Inline: [0] -}
+2e589240d9938c10ce4c6b5e3494635e
+  generate ::
+    (GHC.Types.Int, GHC.Types.Int)
+    -> System.Random.StdGen -> Utils.Graph
+  {- Arity: 2, Strictness: <S(S(S)L),1*U(1*U(U),U(U))><L,U>,
+     Inline: [0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: (GHC.Types.Int, GHC.Types.Int))
+                   (w1 :: System.Random.StdGen) ->
+                 case w of ww { (,) ww1 ww2 ->
+                 case ww1 of ww3 { GHC.Types.I# ww4 ->
+                 Algorithm.Backtracker.$wgenerate ww4 ww2 w1 } }) -}
+"SPEC/Algorithm.Backtracker $fEq(,) @ Int @ Int" [orphan] forall (v1 :: GHC.Classes.Eq
+                                                                          GHC.Types.Int)
+                                                                 (v :: GHC.Classes.Eq GHC.Types.Int)
+  GHC.Classes.$fEq(,) @ GHC.Types.Int @ GHC.Types.Int v v1
+  = Algorithm.Backtracker.$s$fEq(,)
+"SPEC/Algorithm.Backtracker $fOrd(,) @ Int @ Int" [orphan] forall (v1 :: GHC.Classes.Ord
+                                                                           GHC.Types.Int)
+                                                                  (v :: GHC.Classes.Ord
+                                                                          GHC.Types.Int)
+  GHC.Classes.$fOrd(,) @ GHC.Types.Int @ GHC.Types.Int v v1
+  = Algorithm.Backtracker.$s$fOrd(,)
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

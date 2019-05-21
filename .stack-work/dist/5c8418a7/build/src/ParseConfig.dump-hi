@@ -1,0 +1,1335 @@
+
+==================== FINAL INTERFACE ====================
+2019-05-15 06:39:14.885189 UTC
+
+interface MazeGen-0.0.0-7uJHoMSSXBDDo6VkBfny1k:ParseConfig 8022
+  interface hash: 90ec2b9d21369c2520757eafc143897a
+  ABI hash: 841a40ac1526cf817a005b5c1391f6b1
+  export-list hash: 968905327d80a9d6f05abb64e636b5e3
+  orphan hash: b9c91b3bf1530240d61db2c4cb873f38
+  flag hash: 1b5afadeabea1fff5932195884391805
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  ParseConfig.checkConfig
+  ParseConfig.parseConfig
+  ParseConfig.validCoord
+  ParseConfig.Algorithm{ParseConfig.Backtracker ParseConfig.Ellers ParseConfig.GrowingTree ParseConfig.HuntKill ParseConfig.Kruskals ParseConfig.Prims ParseConfig.Sidewinder}
+  ParseConfig.Config{ParseConfig.Config}
+module dependencies:
+package dependencies: Win32-2.5.4.1 aeson-1.2.4.0 array-0.5.2.0
+                      attoparsec-0.13.2.2 base-4.10.1.0 base-compat-0.9.3 binary-0.8.5.1
+                      bytestring-0.10.8.2 containers-0.5.10.2 deepseq-1.4.3.0
+                      dlist-0.8.0.4 ghc-boot-th-8.2.2 ghc-prim-0.5.1.1 hashable-1.2.7.0
+                      integer-gmp-1.0.1.0 integer-logarithms-1.0.2.1 primitive-0.6.3.0
+                      random-1.1 safe-0.3.17 scientific-0.3.5.3 tagged-0.8.5
+                      template-haskell-2.12.0.0 text-1.2.3.0 time-1.8.0.2
+                      time-locale-compat-0.1.1.4 transformers-0.5.2.0
+                      unordered-containers-0.2.9.0 uuid-types-1.0.3 vector-0.12.0.1
+orphans: attoparsec-0.13.2.2:Data.Attoparsec.Text.Internal
+         attoparsec-0.13.2.2:Data.Attoparsec.ByteString.Char8
+         vector-0.12.0.1:Data.Vector.Unboxed
+         time-1.8.0.2:Data.Time.Format.Parse
+         time-1.8.0.2:Data.Time.LocalTime.Internal.ZonedTime
+         time-1.8.0.2:Data.Time.LocalTime.Internal.LocalTime
+         time-1.8.0.2:Data.Time.Calendar.Gregorian
+         hashable-1.2.7.0:Data.Hashable.Generic text-1.2.3.0:Data.Text.Lazy
+         vector-0.12.0.1:Data.Vector.Fusion.Bundle
+         transformers-0.5.2.0:Control.Monad.Trans.Error
+         text-1.2.3.0:Data.Text binary-0.8.5.1:Data.Binary.Generic
+         bytestring-0.10.8.2:Data.ByteString.Builder
+         text-1.2.3.0:Data.Text.Show base-4.10.1.0:GHC.Float
+         base-4.10.1.0:GHC.Base
+family instance modules: aeson-1.2.4.0:Data.Aeson.Types.Internal
+                         attoparsec-0.13.2.2:Data.Attoparsec.Internal.Types
+                         base-4.10.1.0:Control.Applicative base-4.10.1.0:Data.Complex
+                         base-4.10.1.0:Data.Either base-4.10.1.0:Data.Functor.Compose
+                         base-4.10.1.0:Data.Functor.Const
+                         base-4.10.1.0:Data.Functor.Identity
+                         base-4.10.1.0:Data.Functor.Product base-4.10.1.0:Data.Functor.Sum
+                         base-4.10.1.0:Data.List.NonEmpty base-4.10.1.0:Data.Monoid
+                         base-4.10.1.0:Data.Semigroup base-4.10.1.0:Data.Type.Equality
+                         base-4.10.1.0:Data.Version base-4.10.1.0:Data.Void
+                         base-4.10.1.0:GHC.Exts base-4.10.1.0:GHC.Generics
+                         base-4.10.1.0:GHC.IO.Exception base-4.10.1.0:GHC.TypeLits
+                         base-4.10.1.0:GHC.TypeNats containers-0.5.10.2:Data.IntMap.Internal
+                         containers-0.5.10.2:Data.IntSet.Internal
+                         containers-0.5.10.2:Data.Map.Internal
+                         containers-0.5.10.2:Data.Sequence.Internal
+                         containers-0.5.10.2:Data.Set.Internal containers-0.5.10.2:Data.Tree
+                         dlist-0.8.0.4:Data.DList ghc-boot-th-8.2.2:GHC.ForeignSrcLang.Type
+                         ghc-boot-th-8.2.2:GHC.LanguageExtensions.Type
+                         primitive-0.6.3.0:Control.Monad.Primitive
+                         primitive-0.6.3.0:Data.Primitive.Array
+                         primitive-0.6.3.0:Data.Primitive.ByteArray tagged-0.8.5:Data.Tagged
+                         template-haskell-2.12.0.0:Language.Haskell.TH.Syntax
+                         text-1.2.3.0:Data.Text text-1.2.3.0:Data.Text.Lazy
+                         unordered-containers-0.2.9.0:Data.HashMap.Base
+                         unordered-containers-0.2.9.0:Data.HashSet
+                         uuid-types-1.0.3:Data.UUID.Types.Internal
+                         uuid-types-1.0.3:Data.UUID.Types.Internal.Builder
+                         vector-0.12.0.1:Data.Vector vector-0.12.0.1:Data.Vector.Primitive
+                         vector-0.12.0.1:Data.Vector.Storable
+                         vector-0.12.0.1:Data.Vector.Unboxed
+                         vector-0.12.0.1:Data.Vector.Unboxed.Base
+import  -/  aeson-1.2.4.0:Data.Aeson ce61f693cea04d7c83fca1f3748ca297
+import  -/  aeson-1.2.4.0:Data.Aeson.Types a1e7c70ce84d7c6d9cf8c7e74f1d8075
+import  -/  aeson-1.2.4.0:Data.Aeson.Types.FromJSON 73319278d13552240ed9b86b520dd70b
+import  -/  aeson-1.2.4.0:Data.Aeson.Types.Internal 4537127ab2f91988e206e511c61d7e80
+import  -/  base-4.10.1.0:Control.Monad 0557f10d93e84201ae1d619074f2aa0b
+import  -/  base-4.10.1.0:Data.Either 79b3aa7621c39f085b8b2cedd9d3b61b
+import  -/  base-4.10.1.0:Data.Foldable 4349255461f1285ad885cd2301205c36
+import  -/  base-4.10.1.0:Data.Functor b59a97e639e05373a94999f9bb899676
+import  -/  base-4.10.1.0:GHC.Base 8f949d675e49677c272f02ab7a85fe18
+import  -/  base-4.10.1.0:GHC.Num bee60808f8127e4cda82dd422aa1c6c0
+import  -/  base-4.10.1.0:GHC.Read 5893a889a6512ca6f0a5c6c4b98ea136
+import  -/  base-4.10.1.0:GHC.Show 927ef590f679632bf94869e8018e5b48
+import  -/  base-4.10.1.0:Prelude a93a9400cc0c816c2ee5f39399baa7a0
+import  -/  bytestring-0.10.8.2:Data.ByteString.Lazy 797320bfb8012e1e94591960fb41f1fe
+import  -/  bytestring-0.10.8.2:Data.ByteString.Lazy.Internal 6cd1c58d0d8a428f77ff6a327f850cad
+import  -/  ghc-prim-0.5.1.1:GHC.Classes 64ad5910d03ab188ab9b4adef7487b1e
+import  -/  safe-0.3.17:Safe 45c86f6d9cbed1118ad0f5448895c55c
+import  -/  text-1.2.3.0:Data.Text 634481af758bc8113f4250f1294a2fe6
+import  -/  text-1.2.3.0:Data.Text.Internal 79728ecfa78159ec91960edaec627898
+import  -/  text-1.2.3.0:Data.Text.Show 3602f7c4a4d2243fa4238d8c3433a7dd
+ea5a2dae939da99f173651c50d50b2d0
+  $fFromJSONConfig ::
+    Data.Aeson.Types.FromJSON.FromJSON ParseConfig.Config
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ ParseConfig.Config
+                  ParseConfig.$fFromJSONConfig_$cparseJSON
+                  ParseConfig.$fFromJSONConfig_$cparseJSONList -}
+6176908ae6fbcefd54c56fc334ad84a5
+  $fFromJSONConfig1 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: (", encountered "#) -}
+5033b75e032376cecd7117a73c4b245e
+  $fFromJSONConfig2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("[a]"#) -}
+14c87d942eb767e97fa770cc0e814a04
+  $fFromJSONConfig3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("expected "#) -}
+ea5a2dae939da99f173651c50d50b2d0
+  $fFromJSONConfig_$cparseJSON ::
+    Data.Aeson.Types.Internal.Value
+    -> Data.Aeson.Types.Internal.Parser ParseConfig.Config
+  {- Arity: 1, Strictness: <S,1*U> -}
+ea5a2dae939da99f173651c50d50b2d0
+  $fFromJSONConfig_$cparseJSONList ::
+    Data.Aeson.Types.Internal.Value
+    -> Data.Aeson.Types.Internal.Parser [ParseConfig.Config]
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (ds :: Data.Aeson.Types.Internal.Value) ->
+                 case ds of wild {
+                   DEFAULT
+                   -> let {
+                        msg3 :: GHC.Base.String
+                        = GHC.CString.unpackAppendCString#
+                            ParseConfig.$fFromJSONConfig3
+                            (GHC.CString.unpackAppendCString#
+                               ParseConfig.$fFromJSONConfig2
+                               (GHC.CString.unpackAppendCString#
+                                  ParseConfig.$fFromJSONConfig1
+                                  (case wild of wild1 {
+                                     Data.Aeson.Types.Internal.Object ds1
+                                     -> Data.Aeson.Types.FromJSON.$dmliftParseJSONList10
+                                     Data.Aeson.Types.Internal.String ds1
+                                     -> Data.Aeson.Types.FromJSON.$dmliftParseJSONList8
+                                     Data.Aeson.Types.Internal.Number ds1
+                                     -> Data.Aeson.Types.FromJSON.$dmliftParseJSONList6
+                                     Data.Aeson.Types.Internal.Bool ds1
+                                     -> Data.Aeson.Types.FromJSON.$dmliftParseJSONList4
+                                     Data.Aeson.Types.Internal.Null
+                                     -> Data.Aeson.Types.FromJSON.$dmliftParseJSONList1 })))
+                      } in
+                      (\ @ f4 :: * -> *
+                         @ r
+                         (path :: Data.Aeson.Types.Internal.JSONPath)
+                         (kf :: Data.Aeson.Types.Internal.Failure f4 r)
+                         (_ks :: Data.Aeson.Types.Internal.Success
+                                   [ParseConfig.Config] f4 r) ->
+                       kf
+                         (GHC.List.reverse @ Data.Aeson.Types.Internal.JSONPathElement path)
+                         msg3)
+                        `cast`
+                      (Sym (Data.Aeson.Types.Internal.N:Parser[0]
+                                <[ParseConfig.Config]>_R))
+                   Data.Aeson.Types.Internal.Array a2
+                   -> case a2 of wild1 { Data.Vector.Vector dt dt1 dt2 ->
+                      letrec {
+                        $wgo :: GHC.Prim.Int# -> [Data.Aeson.Types.Internal.Value]
+                          {- Arity: 1, Strictness: <S,U>, Inline: [0] -}
+                        = \ (ww :: GHC.Prim.Int#) ->
+                          case GHC.Prim.tagToEnum#
+                                 @ GHC.Types.Bool
+                                 (GHC.Prim.>=# ww dt1) of wild2 {
+                            GHC.Types.False
+                            -> case GHC.Prim.indexArray#
+                                      @ Data.Aeson.Types.Internal.Value
+                                      dt2
+                                      (GHC.Prim.+# dt ww) of ds3 { Unit# ipv ->
+                               GHC.Types.:
+                                 @ Data.Aeson.Types.Internal.Value
+                                 ipv
+                                 ($wgo (GHC.Prim.+# ww 1#)) }
+                            GHC.Types.True -> GHC.Types.[] @ Data.Aeson.Types.Internal.Value }
+                      } in
+                      ParseConfig.$fFromJSONConfig_go 0# ($wgo 0#) } }) -}
+ea5a2dae939da99f173651c50d50b2d0
+  $fFromJSONConfig_go ::
+    GHC.Prim.Int#
+    -> [Data.Aeson.Types.Internal.Value]
+    -> Data.Aeson.Types.Internal.Parser [ParseConfig.Config]
+  {- Arity: 2, Strictness: <L,U><S,1*U> -}
+361883018c0b268804105ce2cf2d8fcb
+  $fReadAlgorithm :: GHC.Read.Read ParseConfig.Algorithm
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ ParseConfig.Algorithm
+                  ParseConfig.$fReadAlgorithm_$creadsPrec
+                  ParseConfig.$fReadAlgorithm_$creadList
+                  ParseConfig.$fReadAlgorithm1
+                    `cast`
+                  (Trans
+                       (<Text.ParserCombinators.ReadPrec.Prec>_R
+                        ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                      <ParseConfig.Algorithm>_R))
+                       (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                 <ParseConfig.Algorithm>_R)))
+                  ParseConfig.$fReadAlgorithm_$creadListPrec -}
+361883018c0b268804105ce2cf2d8fcb
+  $fReadAlgorithm1 ::
+    Text.ParserCombinators.ReadPrec.Prec
+    -> forall b.
+       (ParseConfig.Algorithm -> Text.ParserCombinators.ReadP.P b)
+       -> Text.ParserCombinators.ReadP.P b
+  {- Arity: 2,
+     Unfolding: (GHC.Read.$fRead()6
+                   @ ParseConfig.Algorithm
+                   ParseConfig.$fReadAlgorithm2
+                     `cast`
+                   (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                             <ParseConfig.Algorithm>_R))) -}
+361883018c0b268804105ce2cf2d8fcb
+  $fReadAlgorithm10 ::
+    Text.ParserCombinators.ReadPrec.Prec
+    -> forall b.
+       (ParseConfig.Algorithm -> Text.ParserCombinators.ReadP.P b)
+       -> Text.ParserCombinators.ReadP.P b
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,A><C(S),1*C1(U)>,
+     Unfolding: InlineRule (2, True, True)
+                (\ (ds :: Text.ParserCombinators.ReadPrec.Prec)
+                   @ b
+                   (k :: ParseConfig.Algorithm -> Text.ParserCombinators.ReadP.P b) ->
+                 k ParseConfig.Ellers) -}
+6daf8883ba51fee7cc9642eb6577fd62
+  $fReadAlgorithm11 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   ParseConfig.$fReadAlgorithm12) -}
+ef923615b85b484be47867a6fb5d3a5f
+  $fReadAlgorithm12 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Ellers"#) -}
+361883018c0b268804105ce2cf2d8fcb
+  $fReadAlgorithm13 ::
+    ([GHC.Types.Char],
+     Text.ParserCombinators.ReadPrec.ReadPrec ParseConfig.Algorithm)
+  {- Strictness: m,
+     Unfolding: ((ParseConfig.$fReadAlgorithm15,
+                  ParseConfig.$fReadAlgorithm14
+                    `cast`
+                  (Trans
+                       (<Text.ParserCombinators.ReadPrec.Prec>_R
+                        ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                      <ParseConfig.Algorithm>_R))
+                       (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                 <ParseConfig.Algorithm>_R))))) -}
+361883018c0b268804105ce2cf2d8fcb
+  $fReadAlgorithm14 ::
+    Text.ParserCombinators.ReadPrec.Prec
+    -> forall b.
+       (ParseConfig.Algorithm -> Text.ParserCombinators.ReadP.P b)
+       -> Text.ParserCombinators.ReadP.P b
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,A><C(S),1*C1(U)>,
+     Unfolding: InlineRule (2, True, True)
+                (\ (ds :: Text.ParserCombinators.ReadPrec.Prec)
+                   @ b
+                   (k :: ParseConfig.Algorithm -> Text.ParserCombinators.ReadP.P b) ->
+                 k ParseConfig.Kruskals) -}
+8f12e8c851f4a764390f793e9bb1cae8
+  $fReadAlgorithm15 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   ParseConfig.$fReadAlgorithm16) -}
+e46866551a361e02c05c4cc02da1b638
+  $fReadAlgorithm16 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Kruskals"#) -}
+361883018c0b268804105ce2cf2d8fcb
+  $fReadAlgorithm17 ::
+    ([GHC.Types.Char],
+     Text.ParserCombinators.ReadPrec.ReadPrec ParseConfig.Algorithm)
+  {- Strictness: m,
+     Unfolding: ((ParseConfig.$fReadAlgorithm19,
+                  ParseConfig.$fReadAlgorithm18
+                    `cast`
+                  (Trans
+                       (<Text.ParserCombinators.ReadPrec.Prec>_R
+                        ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                      <ParseConfig.Algorithm>_R))
+                       (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                 <ParseConfig.Algorithm>_R))))) -}
+361883018c0b268804105ce2cf2d8fcb
+  $fReadAlgorithm18 ::
+    Text.ParserCombinators.ReadPrec.Prec
+    -> forall b.
+       (ParseConfig.Algorithm -> Text.ParserCombinators.ReadP.P b)
+       -> Text.ParserCombinators.ReadP.P b
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,A><C(S),1*C1(U)>,
+     Unfolding: InlineRule (2, True, True)
+                (\ (ds :: Text.ParserCombinators.ReadPrec.Prec)
+                   @ b
+                   (k :: ParseConfig.Algorithm -> Text.ParserCombinators.ReadP.P b) ->
+                 k ParseConfig.Sidewinder) -}
+72e349c335ead401127573f87a541dd9
+  $fReadAlgorithm19 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   ParseConfig.$fReadAlgorithm20) -}
+361883018c0b268804105ce2cf2d8fcb
+  $fReadAlgorithm2 ::
+    Text.ParserCombinators.ReadPrec.Prec
+    -> Text.ParserCombinators.ReadP.ReadP ParseConfig.Algorithm
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (eta :: Text.ParserCombinators.ReadPrec.Prec) ->
+                 GHC.Read.choose2
+                   @ ParseConfig.Algorithm
+                   ParseConfig.$fReadAlgorithm_sps
+                   eta) -}
+21e7494f47be8fc48472b17fa691f0b0
+  $fReadAlgorithm20 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Sidewinder"#) -}
+361883018c0b268804105ce2cf2d8fcb
+  $fReadAlgorithm21 ::
+    ([GHC.Types.Char],
+     Text.ParserCombinators.ReadPrec.ReadPrec ParseConfig.Algorithm)
+  {- Strictness: m,
+     Unfolding: ((ParseConfig.$fReadAlgorithm23,
+                  ParseConfig.$fReadAlgorithm22
+                    `cast`
+                  (Trans
+                       (<Text.ParserCombinators.ReadPrec.Prec>_R
+                        ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                      <ParseConfig.Algorithm>_R))
+                       (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                 <ParseConfig.Algorithm>_R))))) -}
+361883018c0b268804105ce2cf2d8fcb
+  $fReadAlgorithm22 ::
+    Text.ParserCombinators.ReadPrec.Prec
+    -> forall b.
+       (ParseConfig.Algorithm -> Text.ParserCombinators.ReadP.P b)
+       -> Text.ParserCombinators.ReadP.P b
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,A><C(S),1*C1(U)>,
+     Unfolding: InlineRule (2, True, True)
+                (\ (ds :: Text.ParserCombinators.ReadPrec.Prec)
+                   @ b
+                   (k :: ParseConfig.Algorithm -> Text.ParserCombinators.ReadP.P b) ->
+                 k ParseConfig.GrowingTree) -}
+74afe4a08850a701b77e06e0b7750c1b
+  $fReadAlgorithm23 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   ParseConfig.$fReadAlgorithm24) -}
+a3f82ad68bfcd14b5b444ce933029c09
+  $fReadAlgorithm24 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("GrowingTree"#) -}
+361883018c0b268804105ce2cf2d8fcb
+  $fReadAlgorithm25 ::
+    ([GHC.Types.Char],
+     Text.ParserCombinators.ReadPrec.ReadPrec ParseConfig.Algorithm)
+  {- Strictness: m,
+     Unfolding: ((ParseConfig.$fReadAlgorithm27,
+                  ParseConfig.$fReadAlgorithm26
+                    `cast`
+                  (Trans
+                       (<Text.ParserCombinators.ReadPrec.Prec>_R
+                        ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                      <ParseConfig.Algorithm>_R))
+                       (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                 <ParseConfig.Algorithm>_R))))) -}
+361883018c0b268804105ce2cf2d8fcb
+  $fReadAlgorithm26 ::
+    Text.ParserCombinators.ReadPrec.Prec
+    -> forall b.
+       (ParseConfig.Algorithm -> Text.ParserCombinators.ReadP.P b)
+       -> Text.ParserCombinators.ReadP.P b
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,A><C(S),1*C1(U)>,
+     Unfolding: InlineRule (2, True, True)
+                (\ (ds :: Text.ParserCombinators.ReadPrec.Prec)
+                   @ b
+                   (k :: ParseConfig.Algorithm -> Text.ParserCombinators.ReadP.P b) ->
+                 k ParseConfig.HuntKill) -}
+7146e0006d2a258d982e5779d5c1a02f
+  $fReadAlgorithm27 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   ParseConfig.$fReadAlgorithm28) -}
+ecf04ca4b3dc968ead9db16559443563
+  $fReadAlgorithm28 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("HuntKill"#) -}
+361883018c0b268804105ce2cf2d8fcb
+  $fReadAlgorithm29 ::
+    ([GHC.Types.Char],
+     Text.ParserCombinators.ReadPrec.ReadPrec ParseConfig.Algorithm)
+  {- Strictness: m,
+     Unfolding: ((ParseConfig.$fReadAlgorithm31,
+                  ParseConfig.$fReadAlgorithm30
+                    `cast`
+                  (Trans
+                       (<Text.ParserCombinators.ReadPrec.Prec>_R
+                        ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                      <ParseConfig.Algorithm>_R))
+                       (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                 <ParseConfig.Algorithm>_R))))) -}
+361883018c0b268804105ce2cf2d8fcb
+  $fReadAlgorithm3 ::
+    [(GHC.Base.String,
+      Text.ParserCombinators.ReadPrec.ReadPrec ParseConfig.Algorithm)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String,
+                      Text.ParserCombinators.ReadPrec.ReadPrec ParseConfig.Algorithm)
+                   ParseConfig.$fReadAlgorithm29
+                   ParseConfig.$fReadAlgorithm4) -}
+361883018c0b268804105ce2cf2d8fcb
+  $fReadAlgorithm30 ::
+    Text.ParserCombinators.ReadPrec.Prec
+    -> forall b.
+       (ParseConfig.Algorithm -> Text.ParserCombinators.ReadP.P b)
+       -> Text.ParserCombinators.ReadP.P b
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,A><C(S),1*C1(U)>,
+     Unfolding: InlineRule (2, True, True)
+                (\ (ds :: Text.ParserCombinators.ReadPrec.Prec)
+                   @ b
+                   (k :: ParseConfig.Algorithm -> Text.ParserCombinators.ReadP.P b) ->
+                 k ParseConfig.Prims) -}
+95512f46ba3f662ea6d9184aab712916
+  $fReadAlgorithm31 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   ParseConfig.$fReadAlgorithm32) -}
+27b8091ce12af3cbe2ffb74ac198e207
+  $fReadAlgorithm32 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Prims"#) -}
+361883018c0b268804105ce2cf2d8fcb
+  $fReadAlgorithm33 ::
+    ([GHC.Types.Char],
+     Text.ParserCombinators.ReadPrec.ReadPrec ParseConfig.Algorithm)
+  {- Strictness: m,
+     Unfolding: ((ParseConfig.$fReadAlgorithm35,
+                  ParseConfig.$fReadAlgorithm34
+                    `cast`
+                  (Trans
+                       (<Text.ParserCombinators.ReadPrec.Prec>_R
+                        ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                      <ParseConfig.Algorithm>_R))
+                       (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                 <ParseConfig.Algorithm>_R))))) -}
+361883018c0b268804105ce2cf2d8fcb
+  $fReadAlgorithm34 ::
+    Text.ParserCombinators.ReadPrec.Prec
+    -> forall b.
+       (ParseConfig.Algorithm -> Text.ParserCombinators.ReadP.P b)
+       -> Text.ParserCombinators.ReadP.P b
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,A><C(S),1*C1(U)>,
+     Unfolding: InlineRule (2, True, True)
+                (\ (ds :: Text.ParserCombinators.ReadPrec.Prec)
+                   @ b
+                   (k :: ParseConfig.Algorithm -> Text.ParserCombinators.ReadP.P b) ->
+                 k ParseConfig.Backtracker) -}
+76f6d53d928fa4a10b7efe0756226fe8
+  $fReadAlgorithm35 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   ParseConfig.$fReadAlgorithm36) -}
+607c815130b087c5358fdd1206ab52f6
+  $fReadAlgorithm36 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Backtracker"#) -}
+361883018c0b268804105ce2cf2d8fcb
+  $fReadAlgorithm37 ::
+    Text.ParserCombinators.ReadP.P [ParseConfig.Algorithm]
+  {- Unfolding: ((ParseConfig.$fReadAlgorithm_$creadListPrec
+                    `cast`
+                  (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                       <[ParseConfig.Algorithm]>_R)
+                    GHC.Read.$fRead()8)
+                   `cast`
+                 (Text.ParserCombinators.ReadP.N:ReadP[0]
+                      <[ParseConfig.Algorithm]>_R)
+                   @ [ParseConfig.Algorithm]
+                   (Text.ParserCombinators.ReadP.$fApplicativeP_$cpure
+                      @ [ParseConfig.Algorithm])) -}
+361883018c0b268804105ce2cf2d8fcb
+  $fReadAlgorithm4 ::
+    [(GHC.Base.String,
+      Text.ParserCombinators.ReadPrec.ReadPrec ParseConfig.Algorithm)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String,
+                      Text.ParserCombinators.ReadPrec.ReadPrec ParseConfig.Algorithm)
+                   ParseConfig.$fReadAlgorithm25
+                   ParseConfig.$fReadAlgorithm5) -}
+361883018c0b268804105ce2cf2d8fcb
+  $fReadAlgorithm5 ::
+    [(GHC.Base.String,
+      Text.ParserCombinators.ReadPrec.ReadPrec ParseConfig.Algorithm)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String,
+                      Text.ParserCombinators.ReadPrec.ReadPrec ParseConfig.Algorithm)
+                   ParseConfig.$fReadAlgorithm21
+                   ParseConfig.$fReadAlgorithm6) -}
+361883018c0b268804105ce2cf2d8fcb
+  $fReadAlgorithm6 ::
+    [(GHC.Base.String,
+      Text.ParserCombinators.ReadPrec.ReadPrec ParseConfig.Algorithm)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String,
+                      Text.ParserCombinators.ReadPrec.ReadPrec ParseConfig.Algorithm)
+                   ParseConfig.$fReadAlgorithm17
+                   ParseConfig.$fReadAlgorithm7) -}
+361883018c0b268804105ce2cf2d8fcb
+  $fReadAlgorithm7 ::
+    [(GHC.Base.String,
+      Text.ParserCombinators.ReadPrec.ReadPrec ParseConfig.Algorithm)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String,
+                      Text.ParserCombinators.ReadPrec.ReadPrec ParseConfig.Algorithm)
+                   ParseConfig.$fReadAlgorithm13
+                   ParseConfig.$fReadAlgorithm8) -}
+361883018c0b268804105ce2cf2d8fcb
+  $fReadAlgorithm8 ::
+    [(GHC.Base.String,
+      Text.ParserCombinators.ReadPrec.ReadPrec ParseConfig.Algorithm)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String,
+                      Text.ParserCombinators.ReadPrec.ReadPrec ParseConfig.Algorithm)
+                   ParseConfig.$fReadAlgorithm9
+                   (GHC.Types.[]
+                      @ (GHC.Base.String,
+                         Text.ParserCombinators.ReadPrec.ReadPrec
+                           ParseConfig.Algorithm))) -}
+361883018c0b268804105ce2cf2d8fcb
+  $fReadAlgorithm9 ::
+    ([GHC.Types.Char],
+     Text.ParserCombinators.ReadPrec.ReadPrec ParseConfig.Algorithm)
+  {- Strictness: m,
+     Unfolding: ((ParseConfig.$fReadAlgorithm11,
+                  ParseConfig.$fReadAlgorithm10
+                    `cast`
+                  (Trans
+                       (<Text.ParserCombinators.ReadPrec.Prec>_R
+                        ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                      <ParseConfig.Algorithm>_R))
+                       (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                 <ParseConfig.Algorithm>_R))))) -}
+361883018c0b268804105ce2cf2d8fcb
+  $fReadAlgorithm_$creadList ::
+    Text.ParserCombinators.ReadP.ReadS [ParseConfig.Algorithm]
+  {- Arity: 1,
+     Unfolding: (Text.ParserCombinators.ReadP.run
+                   @ [ParseConfig.Algorithm]
+                   ParseConfig.$fReadAlgorithm37) -}
+361883018c0b268804105ce2cf2d8fcb
+  $fReadAlgorithm_$creadListPrec ::
+    Text.ParserCombinators.ReadPrec.ReadPrec [ParseConfig.Algorithm]
+  {- Unfolding: (GHC.Read.list
+                   @ ParseConfig.Algorithm
+                   ParseConfig.$fReadAlgorithm1
+                     `cast`
+                   (Trans
+                        (<Text.ParserCombinators.ReadPrec.Prec>_R
+                         ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                       <ParseConfig.Algorithm>_R))
+                        (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                  <ParseConfig.Algorithm>_R)))) -}
+361883018c0b268804105ce2cf2d8fcb
+  $fReadAlgorithm_$creadsPrec ::
+    GHC.Types.Int
+    -> Text.ParserCombinators.ReadP.ReadS ParseConfig.Algorithm
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (n :: GHC.Types.Int) ->
+                 Text.ParserCombinators.ReadP.run
+                   @ ParseConfig.Algorithm
+                   (GHC.Read.$fRead()6
+                      @ ParseConfig.Algorithm
+                      ParseConfig.$fReadAlgorithm2
+                        `cast`
+                      (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                <ParseConfig.Algorithm>_R))
+                      n
+                      @ ParseConfig.Algorithm
+                      (Text.ParserCombinators.ReadP.$fApplicativeP_$cpure
+                         @ ParseConfig.Algorithm))) -}
+361883018c0b268804105ce2cf2d8fcb
+  $fReadAlgorithm_sps ::
+    [(GHC.Base.String,
+      Text.ParserCombinators.ReadPrec.ReadPrec ParseConfig.Algorithm)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String,
+                      Text.ParserCombinators.ReadPrec.ReadPrec ParseConfig.Algorithm)
+                   ParseConfig.$fReadAlgorithm33
+                   ParseConfig.$fReadAlgorithm3) -}
+361883018c0b268804105ce2cf2d8fcb
+  $fShowAlgorithm :: GHC.Show.Show ParseConfig.Algorithm
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ ParseConfig.Algorithm
+                  ParseConfig.$fShowAlgorithm_$cshowsPrec
+                  ParseConfig.$fShowAlgorithm_$cshow
+                  ParseConfig.$fShowAlgorithm_$cshowList -}
+361883018c0b268804105ce2cf2d8fcb
+  $fShowAlgorithm_$cshow :: ParseConfig.Algorithm -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: ParseConfig.Algorithm) ->
+                 case x of wild {
+                   ParseConfig.Backtracker -> ParseConfig.$fReadAlgorithm35
+                   ParseConfig.Prims -> ParseConfig.$fReadAlgorithm31
+                   ParseConfig.HuntKill -> ParseConfig.$fReadAlgorithm27
+                   ParseConfig.GrowingTree -> ParseConfig.$fReadAlgorithm23
+                   ParseConfig.Sidewinder -> ParseConfig.$fReadAlgorithm19
+                   ParseConfig.Kruskals -> ParseConfig.$fReadAlgorithm15
+                   ParseConfig.Ellers -> ParseConfig.$fReadAlgorithm11 }) -}
+361883018c0b268804105ce2cf2d8fcb
+  $fShowAlgorithm_$cshowList ::
+    [ParseConfig.Algorithm] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ ParseConfig.Algorithm
+                   ParseConfig.$w$cshowsPrec) -}
+361883018c0b268804105ce2cf2d8fcb
+  $fShowAlgorithm_$cshowsPrec ::
+    GHC.Types.Int -> ParseConfig.Algorithm -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,A><S,1*U><L,1*U>, Inline: [0],
+     Unfolding: InlineRule (3, True, True)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: ParseConfig.Algorithm)
+                   (w2 :: GHC.Base.String) ->
+                 ParseConfig.$w$cshowsPrec w1 w2) -}
+ea5a2dae939da99f173651c50d50b2d0
+  $fShowConfig :: GHC.Show.Show ParseConfig.Config
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ ParseConfig.Config
+                  ParseConfig.$fShowConfig_$cshowsPrec
+                  ParseConfig.$fShowConfig_$cshow
+                  ParseConfig.$fShowConfig_$cshowList -}
+ea5a2dae939da99f173651c50d50b2d0
+  $fShowConfig1 :: ParseConfig.Config -> GHC.Show.ShowS
+  {- Arity: 2,
+     Strictness: <S,1*U(1*U,1*U(1*U(U),1*U(U)),1*U(U),1*U,1*U(1*U(U),1*U(U)),1*U(1*U(U),1*U(U)))><L,U>,
+     Unfolding: (\ (w :: ParseConfig.Config) (w1 :: GHC.Base.String) ->
+                 case w of ww { ParseConfig.Config ww1 ww2 ww3 ww4 ww5 ww6 ->
+                 ParseConfig.$w$cshowsPrec1 0# ww1 ww2 ww3 ww4 ww5 ww6 w1 }) -}
+8cd30b7966e78c564c3e08ee4de8c6d8
+  $fShowConfig2 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
+ea5a2dae939da99f173651c50d50b2d0
+  $fShowConfig_$cshow :: ParseConfig.Config -> GHC.Base.String
+  {- Arity: 1,
+     Strictness: <S,1*U(1*U,1*U(1*U(U),1*U(U)),1*U(U),1*U,1*U(1*U(U),1*U(U)),1*U(1*U(U),1*U(U)))>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: ParseConfig.Config) ->
+                 ParseConfig.$fShowConfig_$cshowsPrec
+                   ParseConfig.$fShowConfig2
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+ea5a2dae939da99f173651c50d50b2d0
+  $fShowConfig_$cshowList :: [ParseConfig.Config] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ ParseConfig.Config
+                   ParseConfig.$fShowConfig1) -}
+ea5a2dae939da99f173651c50d50b2d0
+  $fShowConfig_$cshowsPrec ::
+    GHC.Types.Int -> ParseConfig.Config -> GHC.Show.ShowS
+  {- Arity: 3,
+     Strictness: <S(S),1*U(U)><S,1*U(1*U,1*U(1*U(U),1*U(U)),1*U(U),1*U,1*U(1*U(U),1*U(U)),1*U(1*U(U),1*U(U)))><L,U>,
+     Inline: [0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: ParseConfig.Config)
+                   (w2 :: GHC.Base.String) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 case w1 of ww2 { ParseConfig.Config ww3 ww4 ww5 ww6 ww7 ww8 ->
+                 ParseConfig.$w$cshowsPrec1 ww1 ww3 ww4 ww5 ww6 ww7 ww8 w2 } }) -}
+9f96ca660c4cadfcf189caab7207e8ae
+  $s$fRead(,) :: GHC.Read.Read (GHC.Types.Int, GHC.Types.Int)
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ (GHC.Types.Int, GHC.Types.Int)
+                  (GHC.Read.$fRead(,)_$creadsPrec
+                     @ GHC.Types.Int
+                     @ GHC.Types.Int
+                     GHC.Read.$fReadInt
+                     GHC.Read.$fReadInt)
+                  (Text.ParserCombinators.ReadP.run
+                     @ [(GHC.Types.Int, GHC.Types.Int)]
+                     (((GHC.Read.list
+                          @ (GHC.Types.Int, GHC.Types.Int)
+                          (\ (eta :: Text.ParserCombinators.ReadPrec.Prec)
+                             @ b1
+                             (eta1 :: (GHC.Types.Int, GHC.Types.Int)
+                                      -> Text.ParserCombinators.ReadP.P b1) ->
+                           GHC.Read.$fRead(,)5
+                             @ (GHC.Types.Int, GHC.Types.Int)
+                             (GHC.Read.$fRead(,)2
+                                @ GHC.Types.Int
+                                @ GHC.Types.Int
+                                GHC.Read.$fReadInt
+                                GHC.Read.$fReadInt)
+                               `cast`
+                             (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                       <(GHC.Types.Int, GHC.Types.Int)>_R))
+                             eta
+                             @ b1
+                             eta1)
+                            `cast`
+                          (Trans
+                               (<Text.ParserCombinators.ReadPrec.Prec>_R
+                                ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                              <(GHC.Types.Int, GHC.Types.Int)>_R))
+                               (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                         <(GHC.Types.Int, GHC.Types.Int)>_R))))
+                         `cast`
+                       (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                            <[(GHC.Types.Int, GHC.Types.Int)]>_R)
+                         GHC.Read.$fRead()8)
+                        `cast`
+                      (Text.ParserCombinators.ReadP.N:ReadP[0]
+                           <[(GHC.Types.Int, GHC.Types.Int)]>_R)
+                        @ [(GHC.Types.Int, GHC.Types.Int)]
+                        (Text.ParserCombinators.ReadP.$fApplicativeP_$cpure
+                           @ [(GHC.Types.Int, GHC.Types.Int)])))
+                  (\ (eta :: Text.ParserCombinators.ReadPrec.Prec)
+                     @ b1
+                     (eta1 :: (GHC.Types.Int, GHC.Types.Int)
+                              -> Text.ParserCombinators.ReadP.P b1) ->
+                   GHC.Read.$fRead(,)5
+                     @ (GHC.Types.Int, GHC.Types.Int)
+                     (GHC.Read.$fRead(,)2
+                        @ GHC.Types.Int
+                        @ GHC.Types.Int
+                        GHC.Read.$fReadInt
+                        GHC.Read.$fReadInt)
+                       `cast`
+                     (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                               <(GHC.Types.Int, GHC.Types.Int)>_R))
+                     eta
+                     @ b1
+                     eta1)
+                    `cast`
+                  (Trans
+                       (<Text.ParserCombinators.ReadPrec.Prec>_R
+                        ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                      <(GHC.Types.Int, GHC.Types.Int)>_R))
+                       (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                 <(GHC.Types.Int, GHC.Types.Int)>_R)))
+                  (GHC.Read.list
+                     @ (GHC.Types.Int, GHC.Types.Int)
+                     (\ (eta :: Text.ParserCombinators.ReadPrec.Prec)
+                        @ b1
+                        (eta1 :: (GHC.Types.Int, GHC.Types.Int)
+                                 -> Text.ParserCombinators.ReadP.P b1) ->
+                      GHC.Read.$fRead(,)5
+                        @ (GHC.Types.Int, GHC.Types.Int)
+                        (GHC.Read.$fRead(,)2
+                           @ GHC.Types.Int
+                           @ GHC.Types.Int
+                           GHC.Read.$fReadInt
+                           GHC.Read.$fReadInt)
+                          `cast`
+                        (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                  <(GHC.Types.Int, GHC.Types.Int)>_R))
+                        eta
+                        @ b1
+                        eta1)
+                       `cast`
+                     (Trans
+                          (<Text.ParserCombinators.ReadPrec.Prec>_R
+                           ->_R Sym (Text.ParserCombinators.ReadP.N:ReadP[0]
+                                         <(GHC.Types.Int, GHC.Types.Int)>_R))
+                          (Sym (Text.ParserCombinators.ReadPrec.N:ReadPrec[0]
+                                    <(GHC.Types.Int, GHC.Types.Int)>_R)))) -}
+325b81c99f6d774499dd9888a91a175a
+  $tc'Backtracker :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   3272094660086532841##
+                   11368920476475015370##
+                   ParseConfig.$trModule
+                   ParseConfig.$tc'Backtracker2
+                   0#
+                   ParseConfig.$tc'Backtracker1) -}
+dcebe640413d70ea447d0ae392bbd8cd
+  $tc'Backtracker1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m1, Inline: [~] -}
+a076c552456338ce23758d2743795976
+  $tc'Backtracker2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS ParseConfig.$tc'Backtracker3) -}
+d87107a8ee8f94cc0870bc2436116f51
+  $tc'Backtracker3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Backtracker"#) -}
+a480f9f4cad8b25f21d5f369062c3739
+  $tc'Config :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   12115906039150974858##
+                   3981856896948707100##
+                   ParseConfig.$trModule
+                   ParseConfig.$tc'Config2
+                   0#
+                   ParseConfig.$tc'Config1) -}
+77298ac40cb1966e020874be51cf4d21
+  $tc'Config1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+7b7bf57a8788377f22391f5ad66af35f
+  $tc'Config2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS ParseConfig.$tc'Config3) -}
+df937c25c4934bb45fc7356639166291
+  $tc'Config3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Config"#) -}
+2fa71f920e0bb81f2a072f281a8898d3
+  $tc'Ellers :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   15653378967297061919##
+                   1365412898445440175##
+                   ParseConfig.$trModule
+                   ParseConfig.$tc'Ellers1
+                   0#
+                   ParseConfig.$tc'Backtracker1) -}
+b27b51aa5775730b6c61ed64f54c550d
+  $tc'Ellers1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS ParseConfig.$tc'Ellers2) -}
+466a75741e714e3d1b9ef8da890e556c
+  $tc'Ellers2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Ellers"#) -}
+4e52e91ecb4a382f95c81afb199c5b25
+  $tc'GrowingTree :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   11089569795272442568##
+                   5442020258984593309##
+                   ParseConfig.$trModule
+                   ParseConfig.$tc'GrowingTree1
+                   0#
+                   ParseConfig.$tc'Backtracker1) -}
+060899cac255579c1b05e16b7e5ec0ff
+  $tc'GrowingTree1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS ParseConfig.$tc'GrowingTree2) -}
+923f96b1c6676f0d4a707095cea0a4c7
+  $tc'GrowingTree2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'GrowingTree"#) -}
+c2a4fc284ee6df95ca2330ae40a25791
+  $tc'HuntKill :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   13936011311288102341##
+                   17910329865518214690##
+                   ParseConfig.$trModule
+                   ParseConfig.$tc'HuntKill1
+                   0#
+                   ParseConfig.$tc'Backtracker1) -}
+d148081e2b1ed3172c7795a5f608dba5
+  $tc'HuntKill1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS ParseConfig.$tc'HuntKill2) -}
+2251c4e65ba0f76bce3b5c85630fbef0
+  $tc'HuntKill2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'HuntKill"#) -}
+5cd23a5f3601ea6e5ffa7b22ffae5d8a
+  $tc'Kruskals :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   17044362737923353116##
+                   3719521361531421779##
+                   ParseConfig.$trModule
+                   ParseConfig.$tc'Kruskals1
+                   0#
+                   ParseConfig.$tc'Backtracker1) -}
+a066ced72996753c263bc29786f70081
+  $tc'Kruskals1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS ParseConfig.$tc'Kruskals2) -}
+f2fb41993ddd742a84dd7c1ed2406150
+  $tc'Kruskals2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Kruskals"#) -}
+13b960bb5a70881bb5b71e998e4cf181
+  $tc'Prims :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   9633427251534717244##
+                   2681871020691305356##
+                   ParseConfig.$trModule
+                   ParseConfig.$tc'Prims1
+                   0#
+                   ParseConfig.$tc'Backtracker1) -}
+434061424069505cf8af5e75686394ca
+  $tc'Prims1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS ParseConfig.$tc'Prims2) -}
+e4607a638bda674c7b10e738f613218c
+  $tc'Prims2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Prims"#) -}
+7520775c86c92ab21dc32b13513533f6
+  $tc'Sidewinder :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   14783347637128565921##
+                   2172120730795858616##
+                   ParseConfig.$trModule
+                   ParseConfig.$tc'Sidewinder1
+                   0#
+                   ParseConfig.$tc'Backtracker1) -}
+d53ee3d56cfa4498964198551a988c8e
+  $tc'Sidewinder1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS ParseConfig.$tc'Sidewinder2) -}
+673ed32718e21b2e28ffd7b411fbfdb0
+  $tc'Sidewinder2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Sidewinder"#) -}
+98f0e9b50beb4c2ccb2ac891e2759aa9
+  $tcAlgorithm :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   4635976811904907920##
+                   3484663879746412059##
+                   ParseConfig.$trModule
+                   ParseConfig.$tcAlgorithm1
+                   0#
+                   GHC.Types.krep$*) -}
+5143c159e9747a00ab265d40b6662289
+  $tcAlgorithm1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS ParseConfig.$tcAlgorithm2) -}
+e58309ca2da66b2e1d29974383b891f0
+  $tcAlgorithm2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Algorithm"#) -}
+3e49bc965fb6d4da244517be5e5d67cb
+  $tcConfig :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   6994060359952844638##
+                   9742086285023001678##
+                   ParseConfig.$trModule
+                   ParseConfig.$tcConfig1
+                   0#
+                   GHC.Types.krep$*) -}
+60c8ed304afbdc5813c79ce830b4adc2
+  $tcConfig1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS ParseConfig.$tcConfig2) -}
+127b2288d3a61f942bef2cd09cd55acc
+  $tcConfig2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Config"#) -}
+189baf464ca600442ef96fd351b2bdf8
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   ParseConfig.$trModule3
+                   ParseConfig.$trModule1) -}
+adb6a14a06bc271e896f74f696f831cf
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS ParseConfig.$trModule2) -}
+ce949f7d48845979b2f33c1dcfeb3b3b
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("ParseConfig"#) -}
+66646dc4b69013c7db7d42a4b0e7987a
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS ParseConfig.$trModule4) -}
+40c247bb0abde81079d9daeae125b136
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("MazeGen-0.0.0-7uJHoMSSXBDDo6VkBfny1k"#) -}
+361883018c0b268804105ce2cf2d8fcb
+  $w$cshowsPrec ::
+    ParseConfig.Algorithm -> GHC.Base.String -> GHC.Base.String
+  {- Arity: 2, Strictness: <S,1*U><L,1*U>, Inline: [0],
+     Unfolding: (\ (w :: ParseConfig.Algorithm)
+                   (w1 :: GHC.Base.String) ->
+                 case w of wild {
+                   ParseConfig.Backtracker
+                   -> GHC.Base.++ @ GHC.Types.Char ParseConfig.$fReadAlgorithm35 w1
+                   ParseConfig.Prims
+                   -> GHC.Base.++ @ GHC.Types.Char ParseConfig.$fReadAlgorithm31 w1
+                   ParseConfig.HuntKill
+                   -> GHC.Base.++ @ GHC.Types.Char ParseConfig.$fReadAlgorithm27 w1
+                   ParseConfig.GrowingTree
+                   -> GHC.Base.++ @ GHC.Types.Char ParseConfig.$fReadAlgorithm23 w1
+                   ParseConfig.Sidewinder
+                   -> GHC.Base.++ @ GHC.Types.Char ParseConfig.$fReadAlgorithm19 w1
+                   ParseConfig.Kruskals
+                   -> GHC.Base.++ @ GHC.Types.Char ParseConfig.$fReadAlgorithm15 w1
+                   ParseConfig.Ellers
+                   -> GHC.Base.++
+                        @ GHC.Types.Char
+                        ParseConfig.$fReadAlgorithm11
+                        w1 }) -}
+41de4b4684dc094c01bd2b6f7e5d4108
+  $w$cshowsPrec1 ::
+    GHC.Prim.Int#
+    -> ParseConfig.Algorithm
+    -> (GHC.Types.Int, GHC.Types.Int)
+    -> GHC.Types.Int
+    -> GHC.Types.Bool
+    -> (GHC.Types.Int, GHC.Types.Int)
+    -> (GHC.Types.Int, GHC.Types.Int)
+    -> GHC.Base.String
+    -> GHC.Base.String
+  {- Arity: 8,
+     Strictness: <S,U><L,1*U><L,1*U(1*U(U),1*U(U))><L,1*U(U)><L,1*U><L,1*U(1*U(U),1*U(U))><L,1*U(1*U(U),1*U(U))><L,U>,
+     Inline: [0] -}
+e836d41d1675498835bab3c43567ce1a
+  $wcheckConfig ::
+    ParseConfig.Algorithm
+    -> GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> GHC.Types.Bool
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> Data.Either.Either GHC.Base.String ParseConfig.Config
+  {- Arity: 9,
+     Strictness: <L,U><S,U><L,1*U(U)><L,1*U(U)><L,U><L,1*U(U)><L,U(U)><L,1*U(U)><L,U(U)>,
+     Inline: [0],
+     Unfolding: (\ (ww :: ParseConfig.Algorithm)
+                   (ww1 :: GHC.Prim.Int#)
+                   (ww2 :: GHC.Types.Int)
+                   (ww3 :: GHC.Types.Int)
+                   (ww4 :: GHC.Types.Bool)
+                   (ww5 :: GHC.Types.Int)
+                   (ww6 :: GHC.Types.Int)
+                   (ww7 :: GHC.Types.Int)
+                   (ww8 :: GHC.Types.Int) ->
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.<# ww1 0#) of wild {
+                   GHC.Types.False
+                   -> case ww2 of wild1 { GHC.Types.I# x ->
+                      case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.<# x 0#) of wild2 {
+                        GHC.Types.False
+                        -> case ww3 of wild3 { GHC.Types.I# x1 ->
+                           case GHC.Prim.tagToEnum#
+                                  @ GHC.Types.Bool
+                                  (GHC.Prim.>=# x1 (GHC.Prim.*# ww1 x)) of wild4 {
+                             GHC.Types.False
+                             -> case GHC.Prim.tagToEnum#
+                                       @ GHC.Types.Bool
+                                       (GHC.Prim.<# x1 0#) of wild5 {
+                                  GHC.Types.False
+                                  -> case ww5 of wild6 { GHC.Types.I# x2 ->
+                                     let {
+                                       $j :: Data.Either.Either GHC.Base.String ParseConfig.Config
+                                         <join 0>
+                                       = case ww7 of wild7 { GHC.Types.I# x3 ->
+                                         let {
+                                           ds :: GHC.Types.Int = GHC.Types.I# ww1
+                                         } in
+                                         let {
+                                           $j1 :: Data.Either.Either
+                                                    GHC.Base.String ParseConfig.Config
+                                             <join 0>
+                                           = case ww4 of wild8 {
+                                               GHC.Types.False
+                                               -> Data.Either.Right
+                                                    @ GHC.Base.String
+                                                    @ ParseConfig.Config
+                                                    (ParseConfig.Config
+                                                       ww
+                                                       (ds, wild1)
+                                                       wild3
+                                                       GHC.Types.False
+                                                       (wild6, ww6)
+                                                       (wild7, ww8))
+                                               GHC.Types.True -> ParseConfig.checkConfig13 }
+                                         } in
+                                         case GHC.Prim.tagToEnum#
+                                                @ GHC.Types.Bool
+                                                (GHC.Prim.>=# x3 0#) of wild8 {
+                                           GHC.Types.False -> $j1
+                                           GHC.Types.True
+                                           -> case ww8 of wild9 { GHC.Types.I# x4 ->
+                                              case GHC.Prim.tagToEnum#
+                                                     @ GHC.Types.Bool
+                                                     (GHC.Prim.>=# x4 0#) of wild10 {
+                                                GHC.Types.False -> $j1
+                                                GHC.Types.True
+                                                -> case GHC.Prim.tagToEnum#
+                                                          @ GHC.Types.Bool
+                                                          (GHC.Prim.<# x3 ww1) of wild11 {
+                                                     GHC.Types.False -> $j1
+                                                     GHC.Types.True
+                                                     -> case GHC.Prim.tagToEnum#
+                                                               @ GHC.Types.Bool
+                                                               (GHC.Prim.<# x4 x) of wild12 {
+                                                          GHC.Types.False -> $j1
+                                                          GHC.Types.True
+                                                          -> Data.Either.Right
+                                                               @ GHC.Base.String
+                                                               @ ParseConfig.Config
+                                                               (ParseConfig.Config
+                                                                  ww
+                                                                  (ds, wild1)
+                                                                  wild3
+                                                                  ww4
+                                                                  (wild6, ww6)
+                                                                  (wild7, wild9)) } } } } } }
+                                     } in
+                                     case GHC.Prim.tagToEnum#
+                                            @ GHC.Types.Bool
+                                            (GHC.Prim.>=# x2 0#) of wild7 {
+                                       GHC.Types.False
+                                       -> case ww4 of wild8 {
+                                            GHC.Types.False -> $j
+                                            GHC.Types.True -> ParseConfig.checkConfig10 }
+                                       GHC.Types.True
+                                       -> case ww6 of wild8 { GHC.Types.I# x3 ->
+                                          case GHC.Prim.tagToEnum#
+                                                 @ GHC.Types.Bool
+                                                 (GHC.Prim.>=# x3 0#) of wild9 {
+                                            GHC.Types.False
+                                            -> case ww4 of wild10 {
+                                                 GHC.Types.False -> $j
+                                                 GHC.Types.True -> ParseConfig.checkConfig10 }
+                                            GHC.Types.True
+                                            -> case GHC.Prim.tagToEnum#
+                                                      @ GHC.Types.Bool
+                                                      (GHC.Prim.<# x2 ww1) of wild10 {
+                                                 GHC.Types.False
+                                                 -> case ww4 of wild11 {
+                                                      GHC.Types.False -> $j
+                                                      GHC.Types.True -> ParseConfig.checkConfig10 }
+                                                 GHC.Types.True
+                                                 -> case GHC.Prim.tagToEnum#
+                                                           @ GHC.Types.Bool
+                                                           (GHC.Prim.<# x3 x) of wild11 {
+                                                      GHC.Types.False
+                                                      -> case ww4 of wild12 {
+                                                           GHC.Types.False -> $j
+                                                           GHC.Types.True
+                                                           -> ParseConfig.checkConfig10 }
+                                                      GHC.Types.True -> $j } } } } } }
+                                  GHC.Types.True -> ParseConfig.checkConfig7 }
+                             GHC.Types.True -> ParseConfig.checkConfig4 } }
+                        GHC.Types.True -> ParseConfig.checkConfig1 } }
+                   GHC.Types.True -> ParseConfig.checkConfig1 }) -}
+1d6f070e6305d18ceb44258bf0a7f233
+  $wvalidCoord ::
+    GHC.Types.Int
+    -> GHC.Types.Int
+    -> GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> GHC.Types.Bool
+  {- Arity: 4, HasNoCafRefs,
+     Strictness: <L,1*U(U)><L,1*U(U)><S,U><L,1*U(U)>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Types.Int)
+                   (ww1 :: GHC.Types.Int)
+                   (ww2 :: GHC.Prim.Int#)
+                   (ww3 :: GHC.Types.Int) ->
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.>=# ww2 0#) of wild {
+                   GHC.Types.False -> GHC.Types.False
+                   GHC.Types.True
+                   -> case ww3 of wild1 { GHC.Types.I# x ->
+                      case GHC.Prim.tagToEnum#
+                             @ GHC.Types.Bool
+                             (GHC.Prim.>=# x 0#) of wild2 {
+                        GHC.Types.False -> GHC.Types.False
+                        GHC.Types.True
+                        -> case ww of wild3 { GHC.Types.I# y ->
+                           case GHC.Prim.tagToEnum#
+                                  @ GHC.Types.Bool
+                                  (GHC.Prim.<# ww2 y) of wild4 {
+                             GHC.Types.False -> GHC.Types.False
+                             GHC.Types.True
+                             -> case ww1 of wild5 { GHC.Types.I# y1 ->
+                                GHC.Prim.tagToEnum#
+                                  @ GHC.Types.Bool
+                                  (GHC.Prim.<# x y1) } } } } } }) -}
+361883018c0b268804105ce2cf2d8fcb
+  data Algorithm
+    = Backtracker
+    | Prims
+    | HuntKill
+    | GrowingTree
+    | Sidewinder
+    | Kruskals
+    | Ellers
+ea5a2dae939da99f173651c50d50b2d0
+  data Config
+    = Config ParseConfig.Algorithm
+             (GHC.Types.Int, GHC.Types.Int)
+             GHC.Types.Int
+             GHC.Types.Bool
+             (GHC.Types.Int, GHC.Types.Int)
+             (GHC.Types.Int, GHC.Types.Int)
+f128494a900cc8020175b7a5907d6644
+  checkConfig ::
+    ParseConfig.Config
+    -> Data.Either.Either GHC.Base.String ParseConfig.Config
+  {- Arity: 1,
+     Strictness: <S(LS(S(S)L)LLSS),1*U(U,1*U(1*U(U),1*U(U)),1*U(U),U,1*U(1*U(U),U(U)),1*U(1*U(U),U(U)))>,
+     Inline: [0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: ParseConfig.Config) ->
+                 case w of ww { ParseConfig.Config ww1 ww2 ww3 ww4 ww5 ww6 ->
+                 case ww2 of ww7 { (,) ww8 ww9 ->
+                 case ww8 of ww10 { GHC.Types.I# ww11 ->
+                 case ww5 of ww12 { (,) ww13 ww14 ->
+                 case ww6 of ww15 { (,) ww16 ww17 ->
+                 ParseConfig.$wcheckConfig
+                   ww1
+                   ww11
+                   ww9
+                   ww3
+                   ww4
+                   ww13
+                   ww14
+                   ww16
+                   ww17 } } } } }) -}
+6e59cc6d247cf74e42aa949638b81dd2
+  checkConfig1 ::
+    Data.Either.Either GHC.Base.String ParseConfig.Config
+  {- Strictness: m1,
+     Unfolding: (Data.Either.Left
+                   @ GHC.Base.String
+                   @ ParseConfig.Config
+                   ParseConfig.checkConfig2) -}
+11e5e83626c5af537a33551ced4de221
+  checkConfig10 ::
+    Data.Either.Either GHC.Base.String ParseConfig.Config
+  {- Strictness: m1,
+     Unfolding: (Data.Either.Left
+                   @ GHC.Base.String
+                   @ ParseConfig.Config
+                   ParseConfig.checkConfig11) -}
+e919247370b3c9079bdc177e63168956
+  checkConfig11 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   ParseConfig.checkConfig12) -}
+cadeeba658a55ae1c83b8f441b3d403c
+  checkConfig12 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("Error: Starting point outside maze"#) -}
+0a84e0de01b2b772ecec6f8d6cb556e1
+  checkConfig13 ::
+    Data.Either.Either GHC.Base.String ParseConfig.Config
+  {- Strictness: m1,
+     Unfolding: (Data.Either.Left
+                   @ GHC.Base.String
+                   @ ParseConfig.Config
+                   ParseConfig.checkConfig14) -}
+36932f270abab419fb3ba11680c9cbaf
+  checkConfig14 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   ParseConfig.checkConfig15) -}
+f0572085f950e6a17df5c702734ef118
+  checkConfig15 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("Error: Ending point outside maze"#) -}
+7c65783cf4f647ef38eb52045189bf24
+  checkConfig2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   ParseConfig.checkConfig3) -}
+6ccde4372b8ec15f8ebe286ea44784ef
+  checkConfig3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("Error: Impossible to have maze of negative size"#) -}
+8cecadcb6344f38e2652ead5aeb535b2
+  checkConfig4 ::
+    Data.Either.Either GHC.Base.String ParseConfig.Config
+  {- Strictness: m1,
+     Unfolding: (Data.Either.Left
+                   @ GHC.Base.String
+                   @ ParseConfig.Config
+                   ParseConfig.checkConfig5) -}
+8d5d515292e3a98ae19ec5a5042f13e6
+  checkConfig5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   ParseConfig.checkConfig6) -}
+a084027be1b5b1faa5711972ab9940e2
+  checkConfig6 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("Error: More walls to remove than walls in the maze"#) -}
+7ec06352f8df8472d186b18bd5029927
+  checkConfig7 ::
+    Data.Either.Either GHC.Base.String ParseConfig.Config
+  {- Strictness: m1,
+     Unfolding: (Data.Either.Left
+                   @ GHC.Base.String
+                   @ ParseConfig.Config
+                   ParseConfig.checkConfig8) -}
+fcbc3a58eae094115b29c5fb7f34d1cb
+  checkConfig8 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   ParseConfig.checkConfig9) -}
+ab13f487ced538f516e7a5d3dafa1060
+  checkConfig9 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("Error: impossible to remove negative walls"#) -}
+1e6fff4c10be8665ef653b67c8aff6f5
+  parseConfig ::
+    Data.ByteString.Lazy.Internal.ByteString
+    -> Data.Either.Either GHC.Base.String ParseConfig.Config
+  {- Arity: 1, Strictness: <S,1*U> -}
+c72e5d38d07c0b9aae58adbd08ef7274
+  validCoord ::
+    (GHC.Types.Int, GHC.Types.Int)
+    -> (GHC.Types.Int, GHC.Types.Int) -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S,1*U(1*U(U),1*U(U))><S(S(S)L),1*U(1*U(U),1*U(U))>,
+     Inline: [0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: (GHC.Types.Int, GHC.Types.Int))
+                   (w1 :: (GHC.Types.Int, GHC.Types.Int)) ->
+                 case w of ww { (,) ww1 ww2 ->
+                 case w1 of ww3 { (,) ww4 ww5 ->
+                 case ww4 of ww6 { GHC.Types.I# ww7 ->
+                 ParseConfig.$wvalidCoord ww1 ww2 ww7 ww5 } } }) -}
+instance Data.Aeson.Types.FromJSON.FromJSON [ParseConfig.Config]
+  = ParseConfig.$fFromJSONConfig
+instance GHC.Read.Read [ParseConfig.Algorithm]
+  = ParseConfig.$fReadAlgorithm
+instance GHC.Show.Show [ParseConfig.Algorithm]
+  = ParseConfig.$fShowAlgorithm
+instance GHC.Show.Show [ParseConfig.Config]
+  = ParseConfig.$fShowConfig
+"SPEC/ParseConfig $fRead(,) @ Int @ Int" [orphan] forall (v1 :: GHC.Read.Read
+                                                                  GHC.Types.Int)
+                                                         (v :: GHC.Read.Read GHC.Types.Int)
+  GHC.Read.$fRead(,) @ GHC.Types.Int @ GHC.Types.Int v v1
+  = ParseConfig.$s$fRead(,)
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

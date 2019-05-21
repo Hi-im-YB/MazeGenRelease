@@ -1,0 +1,138 @@
+
+==================== FINAL INTERFACE ====================
+2019-05-15 06:39:15.769862 UTC
+
+interface MazeGen-0.0.0-7uJHoMSSXBDDo6VkBfny1k:Solver 8022
+  interface hash: c2fd78320a9d562a2f3406f19951754f
+  ABI hash: c023fa512f186ee3f28a655e425eda48
+  export-list hash: 37751bcc5819b2337565ae57882a0092
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: c40916f23992457aa4139f284316a1aa
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Solver.paths
+module dependencies:
+package dependencies: array-0.5.2.0 base-4.10.1.0*
+                      containers-0.5.10.2 deepseq-1.4.3.0 ghc-prim-0.5.1.1
+                      integer-gmp-1.0.1.0
+orphans: base-4.10.1.0:GHC.Float base-4.10.1.0:GHC.Base
+family instance modules: base-4.10.1.0:Control.Applicative
+                         base-4.10.1.0:Data.Complex base-4.10.1.0:Data.Either
+                         base-4.10.1.0:Data.Functor.Compose base-4.10.1.0:Data.Functor.Const
+                         base-4.10.1.0:Data.Functor.Identity
+                         base-4.10.1.0:Data.Functor.Product base-4.10.1.0:Data.Functor.Sum
+                         base-4.10.1.0:Data.List.NonEmpty base-4.10.1.0:Data.Monoid
+                         base-4.10.1.0:Data.Semigroup base-4.10.1.0:Data.Type.Equality
+                         base-4.10.1.0:Data.Version base-4.10.1.0:Data.Void
+                         base-4.10.1.0:GHC.Exts base-4.10.1.0:GHC.Generics
+                         base-4.10.1.0:GHC.IO.Exception base-4.10.1.0:GHC.TypeLits
+                         base-4.10.1.0:GHC.TypeNats containers-0.5.10.2:Data.Map.Internal
+                         containers-0.5.10.2:Data.Set.Internal
+import  -/  base-4.10.1.0:GHC.Base 8f949d675e49677c272f02ab7a85fe18
+import  -/  base-4.10.1.0:Prelude a93a9400cc0c816c2ee5f39399baa7a0
+import  -/  containers-0.5.10.2:Data.Map.Internal 765cdf2fdf1dcff75ecb49b5edcb6b02
+import  -/  containers-0.5.10.2:Data.Map.Strict b15cb8b5231a69150e977b51817e845b
+import  -/  containers-0.5.10.2:Data.Set 7773c3ea4eb5302461702acb1f1cb916
+import  -/  containers-0.5.10.2:Data.Set.Internal 2c0ebe68524799feb2ddd690bca723f0
+import  -/  ghc-prim-0.5.1.1:GHC.Classes 64ad5910d03ab188ab9b4adef7487b1e
+c2aac7aecd0eea7d32ca0767a079b1d3
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Solver.$trModule3
+                   Solver.$trModule1) -}
+a453452e3f33cf972a19c476485e0773
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Solver.$trModule2) -}
+87f080a77255bc52e65cd81c81ae6b11
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Solver"#) -}
+bdabb419635f1d81bb213808afd408f6
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Solver.$trModule4) -}
+97fcb23f5bfd1214416594674ebd3b89
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("MazeGen-0.0.0-7uJHoMSSXBDDo6VkBfny1k"#) -}
+c66387d1a9f4feb800a947a701dc4e85
+  paths ::
+    GHC.Classes.Ord a => Data.Map.Internal.Map a [a] -> a -> a -> [[a]]
+  {- Arity: 4,
+     Strictness: <S(LC(C(S))LLLLLL),U(1*U(C(C1(U)),A),C(C1(U)),A,A,A,A,A,A)><S,U><S,U><L,U>,
+     Unfolding: (\ @ a
+                   ($dOrd :: GHC.Classes.Ord a)
+                   (eta :: Data.Map.Internal.Map a [a])
+                   (eta1 :: a)
+                   (eta2 :: a) ->
+                 let {
+                   $dEq :: GHC.Classes.Eq a = GHC.Classes.$p1Ord @ a $dOrd
+                 } in
+                 letrec {
+                   dfs :: Data.Set.Internal.Set a -> [a] -> a -> [[a]]
+                     {- Arity: 3, Strictness: <L,U><S,1*U><L,U> -}
+                   = \ (seen :: Data.Set.Internal.Set a) (ds :: [a]) (n :: a) ->
+                     case ds of wild {
+                       [] -> Solver.paths1 @ a
+                       : p acc
+                       -> case GHC.Classes.== @ a $dEq n eta2 of wild1 {
+                            GHC.Types.False
+                            -> case Data.Set.Internal.member @ a $dOrd n seen of wild2 {
+                                 GHC.Types.False
+                                 -> let {
+                                      f :: Data.Set.Internal.Set a
+                                      = Data.Set.Internal.insert @ a $dOrd n seen
+                                    } in
+                                    let {
+                                      f1 :: [a] = GHC.Types.: @ a n wild
+                                    } in
+                                    letrec {
+                                      go :: [a] -> [[a]] {- Arity: 1, Strictness: <S,1*U> -}
+                                      = \ (ds1 :: [a]) ->
+                                        case ds1 of wild3 {
+                                          [] -> GHC.Types.[] @ [a]
+                                          : y ys -> GHC.Base.++ @ [a] (dfs f f1 y) (go ys) }
+                                    } in
+                                    go (Data.Map.Internal.find @ a @ [a] $dOrd n eta)
+                                 GHC.Types.True -> GHC.Types.[] @ [a] }
+                            GHC.Types.True
+                            -> GHC.Types.:
+                                 @ [a]
+                                 (GHC.Types.: @ a n wild)
+                                 (GHC.Types.[] @ [a]) } }
+                 } in
+                 let {
+                   f :: Data.Set.Internal.Set a
+                   = case eta1 of dt { DEFAULT ->
+                     Data.Set.Internal.Bin
+                       @ a
+                       1#
+                       dt
+                       (Data.Set.Internal.Tip @ a)
+                       (Data.Set.Internal.Tip @ a) }
+                 } in
+                 let {
+                   f1 :: [a] = GHC.Types.: @ a eta1 (GHC.Types.[] @ a)
+                 } in
+                 letrec {
+                   go :: [a] -> [[a]] {- Arity: 1, Strictness: <S,1*U> -}
+                   = \ (ds :: [a]) ->
+                     case ds of wild {
+                       [] -> GHC.Types.[] @ [a]
+                       : y ys -> GHC.Base.++ @ [a] (dfs f f1 y) (go ys) }
+                 } in
+                 go (Data.Map.Internal.find @ a @ [a] $dOrd eta1 eta)) -}
+867bb88c832d2fb13af214e7653f4741
+  paths1 :: [[a]]
+  {- Strictness: x -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

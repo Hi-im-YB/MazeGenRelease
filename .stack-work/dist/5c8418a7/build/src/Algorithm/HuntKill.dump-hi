@@ -1,0 +1,277 @@
+
+==================== FINAL INTERFACE ====================
+2019-05-15 06:39:21.5293121 UTC
+
+interface MazeGen-0.0.0-7uJHoMSSXBDDo6VkBfny1k:Algorithm.HuntKill 8022
+  interface hash: 55ad59afaf17eb735c7032d8a51aac76
+  ABI hash: 5777d00ce0dfa6b13a2b7545f657b9e8
+  export-list hash: f58d60c465e50f60f895f1cfed3fcce1
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 216975b5d4ae400c63c3c0bbab116ef7
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Algorithm.HuntKill.generate
+  Algorithm.HuntKill.hunt
+  Algorithm.HuntKill.walk
+module dependencies: Utils
+package dependencies: Win32-2.5.4.1 array-0.5.2.0 base-4.10.1.0
+                      containers-0.5.10.2 deepseq-1.4.3.0 ghc-prim-0.5.1.1
+                      integer-gmp-1.0.1.0 random-1.1 time-1.8.0.2
+orphans: time-1.8.0.2:Data.Time.Format.Parse
+         time-1.8.0.2:Data.Time.LocalTime.Internal.ZonedTime
+         time-1.8.0.2:Data.Time.LocalTime.Internal.LocalTime
+         time-1.8.0.2:Data.Time.Calendar.Gregorian base-4.10.1.0:GHC.Float
+         base-4.10.1.0:GHC.Base
+family instance modules: base-4.10.1.0:Control.Applicative
+                         base-4.10.1.0:Data.Complex base-4.10.1.0:Data.Either
+                         base-4.10.1.0:Data.Functor.Compose base-4.10.1.0:Data.Functor.Const
+                         base-4.10.1.0:Data.Functor.Identity
+                         base-4.10.1.0:Data.Functor.Product base-4.10.1.0:Data.Functor.Sum
+                         base-4.10.1.0:Data.List.NonEmpty base-4.10.1.0:Data.Monoid
+                         base-4.10.1.0:Data.Semigroup base-4.10.1.0:Data.Type.Equality
+                         base-4.10.1.0:Data.Version base-4.10.1.0:Data.Void
+                         base-4.10.1.0:GHC.Exts base-4.10.1.0:GHC.Generics
+                         base-4.10.1.0:GHC.IO.Exception base-4.10.1.0:GHC.TypeLits
+                         base-4.10.1.0:GHC.TypeNats containers-0.5.10.2:Data.Map.Internal
+                         containers-0.5.10.2:Data.Set.Internal
+import  -/  Utils 6e6d1082e39227c34b4e918c318d7475
+  exports: 1a346ea9081791d6cf43f670dfe87a1b
+  Coord 842d05255a7c8c04e3f4ab73978349cd
+  Graph e50ec7e0719e777fb4b2dcb5d93bb183
+  connect 1c70ff94f657230021b8bed4dfc1219a
+  neighbors 5cdf11a40be1c73f2cb36f68dfc7516e
+  start c1beddb7435d70588f052860cd449b3c
+import  -/  base-4.10.1.0:Data.Foldable 4349255461f1285ad885cd2301205c36
+import  -/  base-4.10.1.0:GHC.Base 8f949d675e49677c272f02ab7a85fe18
+import  -/  base-4.10.1.0:GHC.List 1bb0adf79553530dc898796596e53188
+import  -/  base-4.10.1.0:GHC.Num bee60808f8127e4cda82dd422aa1c6c0
+import  -/  base-4.10.1.0:Prelude a93a9400cc0c816c2ee5f39399baa7a0
+import  -/  containers-0.5.10.2:Data.Map.Internal 765cdf2fdf1dcff75ecb49b5edcb6b02
+import  -/  containers-0.5.10.2:Data.Map.Strict b15cb8b5231a69150e977b51817e845b
+import  -/  containers-0.5.10.2:Data.Set 7773c3ea4eb5302461702acb1f1cb916
+import  -/  containers-0.5.10.2:Data.Set.Internal 2c0ebe68524799feb2ddd690bca723f0
+import  -/  ghc-prim-0.5.1.1:GHC.Classes 64ad5910d03ab188ab9b4adef7487b1e
+import  -/  random-1.1:System.Random 51fb561c639e37ae48a8c45d441a262a
+c06787c2328a9f4971bca845868afe13
+  $smember_go3 ::
+    Utils.Coord -> Data.Set.Internal.Set Utils.Coord -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S,1*U(1*U(U),1*U(U))><S,1*U>, Inline: [0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Utils.Coord) (w1 :: Data.Set.Internal.Set Utils.Coord) ->
+                 case w of ww { (,) ww1 ww2 ->
+                 Algorithm.HuntKill.$wgo3 ww1 ww2 w1 }) -}
+07bf3ba43901a1a91f105b475f48c9ea
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Algorithm.HuntKill.$trModule3
+                   Algorithm.HuntKill.$trModule1) -}
+98b591739667d695a68b5f67abd2824f
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Algorithm.HuntKill.$trModule2) -}
+926f681787ef442cf70a58dead042bc3
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Algorithm.HuntKill"#) -}
+96c742a74b3a0679e2556414c7e659fb
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Algorithm.HuntKill.$trModule4) -}
+13102a0296266c57c26fbfab4e526c9f
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("MazeGen-0.0.0-7uJHoMSSXBDDo6VkBfny1k"#) -}
+978ae0b9ad938f1613b0415a25a69073
+  $w$sgo3 ::
+    Utils.Coord
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> Data.Set.Internal.Set Utils.Coord
+    -> Data.Set.Internal.Set Utils.Coord
+  {- Arity: 4, Strictness: <L,U><L,1*U(U)><L,U(U)><S,1*U>,
+     Inline: [0] -}
+789dab4bd6235e40a5e958c62576609f
+  $wgenerate ::
+    GHC.Prim.Int#
+    -> GHC.Types.Int -> System.Random.StdGen -> Utils.Graph
+  {- Arity: 3, Strictness: <S,U><L,U(U)><L,U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (ww1 :: GHC.Types.Int)
+                   (w :: System.Random.StdGen) ->
+                 case System.Random.$wrandomIvalInteger
+                        @ System.Random.StdGen
+                        @ GHC.Types.Int
+                        System.Random.$fRandomGenStdGen
+                        GHC.Num.$fNumInt
+                        Algorithm.HuntKill.generate1
+                        (GHC.Integer.Type.smallInteger (GHC.Prim.-# ww 1#))
+                        w of ww2 { (#,#) ww3 ww4 ->
+                 case ww3 of ww5 { GHC.Types.I# ww6 ->
+                 let {
+                   ds :: (GHC.Types.Int, System.Random.StdGen)
+                   = case ww1 of wild { GHC.Types.I# x ->
+                     case System.Random.$wrandomIvalInteger
+                            @ System.Random.StdGen
+                            @ GHC.Types.Int
+                            System.Random.$fRandomGenStdGen
+                            GHC.Num.$fNumInt
+                            Algorithm.HuntKill.generate1
+                            (GHC.Integer.Type.smallInteger (GHC.Prim.-# x 1#))
+                            ww4 of ww7 { (#,#) ww8 ww9 ->
+                     (ww8, ww9) } }
+                 } in
+                 let {
+                   sy :: GHC.Types.Int = case ds of wild { (,) sy1 g2 -> sy1 }
+                 } in
+                 Algorithm.HuntKill.$wwalk
+                   (GHC.Types.I# ww)
+                   ww1
+                   ww6
+                   sy
+                   (Utils.$wstart ww ww1)
+                   (Data.Set.Internal.Bin
+                      @ (GHC.Types.Int, GHC.Types.Int)
+                      1#
+                      (ww5, sy)
+                      (Data.Set.Internal.Tip @ (GHC.Types.Int, GHC.Types.Int))
+                      (Data.Set.Internal.Tip @ (GHC.Types.Int, GHC.Types.Int)))
+                   (case ds of wild { (,) sy1 g2 -> g2 }) } }) -}
+db5f7bf188d824e875a71bf68ddf2968
+  $wgo3 ::
+    GHC.Types.Int
+    -> GHC.Types.Int
+    -> Data.Set.Internal.Set Utils.Coord
+    -> GHC.Types.Bool
+  {- Arity: 3, HasNoCafRefs, Strictness: <L,1*U(U)><L,1*U(U)><S,1*U>,
+     Inline: [0] -}
+b258b5a65f0283830514d4f268f2287b
+  $whunt ::
+    GHC.Types.Int
+    -> GHC.Types.Int
+    -> Utils.Graph
+    -> Data.Set.Internal.Set Utils.Coord
+    -> System.Random.StdGen
+    -> Utils.Graph
+  {- Arity: 5, Strictness: <L,U(U)><L,U(U)><S,U><L,U><L,U>,
+     Inline: [0],
+     Unfolding: (\ (ww :: GHC.Types.Int)
+                   (ww1 :: GHC.Types.Int)
+                   (w :: Utils.Graph)
+                   (w1 :: Data.Set.Internal.Set Utils.Coord)
+                   (w2 :: System.Random.StdGen) ->
+                 let {
+                   lvl9 :: Utils.Coord -> GHC.Types.Bool
+                     {- Arity: 1, Strictness: <S,1*U(1*U(U),1*U(U))>,
+                        Unfolding: InlineRule (1, True, False)
+                                   (\ (ds :: Utils.Coord) ->
+                                    Algorithm.HuntKill.$smember_go3 ds w1) -}
+                   = \ (ds :: Utils.Coord) -> Algorithm.HuntKill.$smember_go3 ds w1
+                 } in
+                 letrec {
+                   find :: [(Utils.Coord, [Utils.Coord])] -> Utils.Graph
+                     <join 1> {- Arity: 1, Strictness: <S,1*U> -}
+                   = \ (ds :: [(Utils.Coord, [Utils.Coord])]) ->
+                     case ds of wild {
+                       [] -> w
+                       : ds1 xs
+                       -> case ds1 of wild1 { (,) k ds2 ->
+                          case k of ww2 { (,) ww3 ww4 ->
+                          case Algorithm.HuntKill.$wgo3 ww3 ww4 w1 of wild2 {
+                            GHC.Types.False
+                            -> case ww3 of ww6 { GHC.Types.I# ww7 ->
+                               case GHC.List.filter
+                                      @ (GHC.Types.Int, GHC.Types.Int)
+                                      lvl9
+                                      (Utils.$wneighbors ww ww1 ww7 ww4) of wild3 {
+                                 [] -> find xs
+                                 : ds3 ds4
+                                 -> case ds3 of ww5 { (,) ww9 ww10 ->
+                                    Algorithm.HuntKill.$wwalk
+                                      ww
+                                      ww1
+                                      ww7
+                                      ww4
+                                      (Utils.$wconnect w ww6 ww4 ww9 ww10)
+                                      (Algorithm.HuntKill.$w$sgo3 ww2 ww6 ww4 w1)
+                                      w2 } } }
+                            GHC.Types.True -> find xs } } } }
+                 } in
+                 find
+                   (Data.Map.Internal.$fDataMap_go
+                      @ (GHC.Types.Int, GHC.Types.Int)
+                      @ [Utils.Coord]
+                      (GHC.Types.[] @ ((GHC.Types.Int, GHC.Types.Int), [Utils.Coord]))
+                      w)) -}
+969917bc674e9b57a235367ffbb07583
+  $wwalk ::
+    GHC.Types.Int
+    -> GHC.Types.Int
+    -> GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> Utils.Graph
+    -> Data.Set.Internal.Set Utils.Coord
+    -> System.Random.StdGen
+    -> Utils.Graph
+  {- Arity: 7,
+     Strictness: <L,U(U)><L,U(U)><S,U><L,U(U)><S,U><L,U><L,U>,
+     Inline: [0] -}
+a6a9302a2061dfada70075053b0c5ddd
+  generate :: Utils.Coord -> System.Random.StdGen -> Utils.Graph
+  {- Arity: 2, Strictness: <S(S(S)L),1*U(1*U(U),U(U))><L,U>,
+     Inline: [0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Utils.Coord) (w1 :: System.Random.StdGen) ->
+                 case w of ww { (,) ww1 ww2 ->
+                 case ww1 of ww3 { GHC.Types.I# ww4 ->
+                 Algorithm.HuntKill.$wgenerate ww4 ww2 w1 } }) -}
+afe2fc131d6e914d2ace00b85a0036ca
+  generate1 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (0) -}
+ea8df25137c09cefbb60052d9bb50539
+  hunt ::
+    Utils.Coord
+    -> Utils.Graph
+    -> Data.Set.Internal.Set Utils.Coord
+    -> System.Random.StdGen
+    -> Utils.Graph
+  {- Arity: 4, Strictness: <S,1*U(U(U),U(U))><S,U><L,U><L,U>,
+     Inline: [0],
+     Unfolding: InlineRule (4, True, False)
+                (\ (w :: Utils.Coord)
+                   (w1 :: Utils.Graph)
+                   (w2 :: Data.Set.Internal.Set Utils.Coord)
+                   (w3 :: System.Random.StdGen) ->
+                 case w of ww { (,) ww1 ww2 ->
+                 Algorithm.HuntKill.$whunt ww1 ww2 w1 w2 w3 }) -}
+73f85418b28d7e06ddac7ff4320cbb3b
+  walk ::
+    (GHC.Types.Int, GHC.Types.Int)
+    -> Utils.Coord
+    -> Utils.Graph
+    -> Data.Set.Internal.Set Utils.Coord
+    -> System.Random.StdGen
+    -> Utils.Graph
+  {- Arity: 5,
+     Strictness: <S,1*U(U(U),U(U))><S(S(S)L),1*U(1*U(U),U(U))><S,U><L,U><L,U>,
+     Inline: [0],
+     Unfolding: InlineRule (5, True, False)
+                (\ (w :: (GHC.Types.Int, GHC.Types.Int))
+                   (w1 :: Utils.Coord)
+                   (w2 :: Utils.Graph)
+                   (w3 :: Data.Set.Internal.Set Utils.Coord)
+                   (w4 :: System.Random.StdGen) ->
+                 case w of ww { (,) ww1 ww2 ->
+                 case w1 of ww3 { (,) ww4 ww5 ->
+                 case ww4 of ww6 { GHC.Types.I# ww7 ->
+                 Algorithm.HuntKill.$wwalk ww1 ww2 ww7 ww5 w2 w3 w4 } } }) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

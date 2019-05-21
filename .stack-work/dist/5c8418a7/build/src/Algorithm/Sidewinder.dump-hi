@@ -1,0 +1,285 @@
+
+==================== FINAL INTERFACE ====================
+2019-05-15 06:39:19.3124524 UTC
+
+interface MazeGen-0.0.0-7uJHoMSSXBDDo6VkBfny1k:Algorithm.Sidewinder 8022
+  interface hash: 842a8c046358ff1ee01640f348136e13
+  ABI hash: cc9958189a3ec08be046a0d9a5a7f2e4
+  export-list hash: ce7311c5a10fe3e6bed5327eb1e3585c
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 216975b5d4ae400c63c3c0bbab116ef7
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Algorithm.Sidewinder.firstRow
+  Algorithm.Sidewinder.generate
+  Algorithm.Sidewinder.pickRand
+  Algorithm.Sidewinder.row
+module dependencies: Utils
+package dependencies: Win32-2.5.4.1 array-0.5.2.0 base-4.10.1.0
+                      containers-0.5.10.2 deepseq-1.4.3.0 ghc-prim-0.5.1.1
+                      integer-gmp-1.0.1.0 random-1.1 time-1.8.0.2
+orphans: time-1.8.0.2:Data.Time.Format.Parse
+         time-1.8.0.2:Data.Time.LocalTime.Internal.ZonedTime
+         time-1.8.0.2:Data.Time.LocalTime.Internal.LocalTime
+         time-1.8.0.2:Data.Time.Calendar.Gregorian base-4.10.1.0:GHC.Float
+         base-4.10.1.0:GHC.Base
+family instance modules: base-4.10.1.0:Control.Applicative
+                         base-4.10.1.0:Data.Complex base-4.10.1.0:Data.Either
+                         base-4.10.1.0:Data.Functor.Compose base-4.10.1.0:Data.Functor.Const
+                         base-4.10.1.0:Data.Functor.Identity
+                         base-4.10.1.0:Data.Functor.Product base-4.10.1.0:Data.Functor.Sum
+                         base-4.10.1.0:Data.List.NonEmpty base-4.10.1.0:Data.Monoid
+                         base-4.10.1.0:Data.Semigroup base-4.10.1.0:Data.Type.Equality
+                         base-4.10.1.0:Data.Version base-4.10.1.0:Data.Void
+                         base-4.10.1.0:GHC.Exts base-4.10.1.0:GHC.Generics
+                         base-4.10.1.0:GHC.IO.Exception base-4.10.1.0:GHC.TypeLits
+                         base-4.10.1.0:GHC.TypeNats containers-0.5.10.2:Data.Map.Internal
+                         containers-0.5.10.2:Data.Set.Internal
+import  -/  Utils 6e6d1082e39227c34b4e918c318d7475
+  exports: 1a346ea9081791d6cf43f670dfe87a1b
+  Coord 842d05255a7c8c04e3f4ab73978349cd
+  Graph e50ec7e0719e777fb4b2dcb5d93bb183
+  connect 1c70ff94f657230021b8bed4dfc1219a
+  sample ff511aaa26233e630e42b88918d649a9
+  start c1beddb7435d70588f052860cd449b3c
+import  -/  base-4.10.1.0:Data.Foldable 4349255461f1285ad885cd2301205c36
+import  -/  base-4.10.1.0:Data.Tuple ab0c62ebfcacf00dcba54934885c5064
+import  -/  base-4.10.1.0:GHC.Base 8f949d675e49677c272f02ab7a85fe18
+import  -/  base-4.10.1.0:GHC.List 1bb0adf79553530dc898796596e53188
+import  -/  base-4.10.1.0:GHC.Num bee60808f8127e4cda82dd422aa1c6c0
+import  -/  base-4.10.1.0:Prelude a93a9400cc0c816c2ee5f39399baa7a0
+import  -/  ghc-prim-0.5.1.1:GHC.Classes 64ad5910d03ab188ab9b4adef7487b1e
+import  -/  random-1.1:System.Random 51fb561c639e37ae48a8c45d441a262a
+106302a5cedc04dd3076cf6264dfaee4
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Algorithm.Sidewinder.$trModule3
+                   Algorithm.Sidewinder.$trModule1) -}
+00e73d172257aad0a9454b617d1e6596
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Algorithm.Sidewinder.$trModule2) -}
+dc1971fe4983ca28fc9ac07dbd532766
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Algorithm.Sidewinder"#) -}
+80ee0f1dcf5ecd5fcfc6f848258aa5c8
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Algorithm.Sidewinder.$trModule4) -}
+a82de1f745cdd8e37b1172761082ee5f
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("MazeGen-0.0.0-7uJHoMSSXBDDo6VkBfny1k"#) -}
+7ee472249ef21e473cbf79c2294a6b29
+  $wfirstRow :: GHC.Prim.Int# -> Utils.Graph -> Utils.Graph
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,U><S,U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#) (w :: Utils.Graph) ->
+                 let {
+                   y :: GHC.Prim.Int# = GHC.Prim.-# ww 2#
+                 } in
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.># 0# y) of wild {
+                   GHC.Types.False
+                   -> letrec {
+                        go :: GHC.Prim.Int#
+                              -> [GHC.Types.Int]
+                              -> Data.Map.Internal.Map Utils.Coord [Utils.Coord]
+                          {- Arity: 2, Strictness: <L,U><S,1*U> -}
+                        = \ (x1 :: GHC.Prim.Int#) (eta :: [GHC.Types.Int]) ->
+                          case eta of wild1 {
+                            [] -> w
+                            : y1 ys
+                            -> case GHC.Prim.tagToEnum#
+                                      @ GHC.Types.Bool
+                                      (GHC.Prim.==# x1 y) of wild2 {
+                                 GHC.Types.False
+                                 -> Utils.$wconnect
+                                      (go (GHC.Prim.+# x1 1#) ys)
+                                      (GHC.Types.I# x1)
+                                      y1
+                                      (GHC.Types.I# (GHC.Prim.+# x1 1#))
+                                      y1
+                                 GHC.Types.True
+                                 -> Utils.$wconnect
+                                      w
+                                      (GHC.Types.I# x1)
+                                      y1
+                                      (GHC.Types.I# (GHC.Prim.+# x1 1#))
+                                      y1 } }
+                      } in
+                      go 0# Algorithm.Sidewinder.firstRow_xs
+                   GHC.Types.True -> w }) -}
+b975eb35961192671463961fce78ea0c
+  $wgenerate ::
+    GHC.Types.Int
+    -> GHC.Prim.Int# -> System.Random.StdGen -> Utils.Graph
+  {- Arity: 3, Strictness: <L,U(U)><S,U><L,U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Types.Int)
+                   (ww1 :: GHC.Prim.Int#)
+                   (w :: System.Random.StdGen) ->
+                 let {
+                   y :: GHC.Prim.Int# = GHC.Prim.-# ww1 1#
+                 } in
+                 let {
+                   n :: Utils.Graph
+                   = case ww of ww2 { GHC.Types.I# ww3 ->
+                     Algorithm.Sidewinder.$wfirstRow
+                       ww3
+                       (Utils.$wstart ww3 (GHC.Types.I# ww1)) }
+                 } in
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.># 1# y) of wild {
+                   GHC.Types.False
+                   -> letrec {
+                        $wgo :: GHC.Prim.Int# -> (# Utils.Graph, System.Random.StdGen #)
+                          {- Arity: 1, Strictness: <S,U>, Inline: [0] -}
+                        = \ (w1 :: GHC.Prim.Int#) ->
+                          case GHC.Prim.tagToEnum#
+                                 @ GHC.Types.Bool
+                                 (GHC.Prim.==# w1 y) of wild1 {
+                            GHC.Types.False
+                            -> case $wgo (GHC.Prim.+# w1 1#) of ww2 { (#,#) ww3 ww4 ->
+                               case ww of ww5 { GHC.Types.I# ww6 ->
+                               Algorithm.Sidewinder.$wrow
+                                 ww6
+                                 0#
+                                 (GHC.Types.I# w1)
+                                 ww3
+                                 (GHC.Types.[] @ Utils.Coord)
+                                 ww4 } }
+                            GHC.Types.True
+                            -> case ww of ww2 { GHC.Types.I# ww3 ->
+                               Algorithm.Sidewinder.$wrow
+                                 ww3
+                                 0#
+                                 (GHC.Types.I# w1)
+                                 n
+                                 (GHC.Types.[] @ Utils.Coord)
+                                 w } }
+                      } in
+                      case $wgo 1# of ww2 { (#,#) ww3 ww4 -> ww3 }
+                   GHC.Types.True -> n }) -}
+fff726c420f73c6f526f82a87595e89b
+  $wpickRand ::
+    [Utils.Coord]
+    -> Utils.Graph
+    -> System.Random.StdGen
+    -> (# Utils.Graph, System.Random.StdGen #)
+  {- Arity: 3, Strictness: <L,U><L,1*U><L,U>, Inline: [0],
+     Unfolding: (\ (w :: [Utils.Coord])
+                   (w1 :: Utils.Graph)
+                   (w2 :: System.Random.StdGen) ->
+                 let {
+                   ds :: (GHC.Types.Int, GHC.Types.Int, System.Random.StdGen)
+                   = case Utils.$wsample @ Utils.Coord w w2 of ww { (#,#) ww1 ww2 ->
+                     case ww1 of wild { (,) x1 y -> (x1, y, ww2) } }
+                 } in
+                 (# let {
+                      y :: GHC.Types.Int = case ds of ds1 { (,,) x1 y1 ng -> y1 }
+                    } in
+                    let {
+                      x1 :: GHC.Types.Int = case ds of ds1 { (,,) x2 y1 ng -> x2 }
+                    } in
+                    Utils.$wconnect
+                      w1
+                      x1
+                      y
+                      x1
+                      (case y of wild { GHC.Types.I# x2 ->
+                       GHC.Types.I# (GHC.Prim.-# x2 1#) }),
+                    case ds of ds1 { (,,) x1 y ng -> ng } #)) -}
+d67ad27dbe9c1e928042874e15352c20
+  $wrow ::
+    GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Types.Int
+    -> Utils.Graph
+    -> [Utils.Coord]
+    -> System.Random.StdGen
+    -> (# Utils.Graph, System.Random.StdGen #)
+  {- Arity: 6, Strictness: <S,U><S,U><L,U(U)><L,1*U><L,U><L,U>,
+     Inline: [0] -}
+a0e54dc438acfdb8d65f10f90a92a4cf
+  firstRow ::
+    (GHC.Types.Int, GHC.Types.Int) -> Utils.Graph -> Utils.Graph
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(S(S)L),1*U(1*U(U),A)><S,U>, Inline: [0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: (GHC.Types.Int, GHC.Types.Int)) (w1 :: Utils.Graph) ->
+                 case w of ww { (,) ww1 ww2 ->
+                 case ww1 of ww3 { GHC.Types.I# ww4 ->
+                 Algorithm.Sidewinder.$wfirstRow ww4 w1 } }) -}
+84ed96fa125fe94b2bd4853d59de3694
+  firstRow_xs :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2 -}
+77b790da8fc9a0a69c746d7fca51dc70
+  generate ::
+    (GHC.Types.Int, GHC.Types.Int)
+    -> System.Random.StdGen -> Utils.Graph
+  {- Arity: 2, Strictness: <S(LS(S)),1*U(U(U),1*U(U))><L,U>,
+     Inline: [0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: (GHC.Types.Int, GHC.Types.Int))
+                   (w1 :: System.Random.StdGen) ->
+                 case w of ww { (,) ww1 ww2 ->
+                 case ww2 of ww3 { GHC.Types.I# ww4 ->
+                 Algorithm.Sidewinder.$wgenerate ww1 ww4 w1 } }) -}
+16d34a69dc582065141b1438b7ec85a3
+  pickRand ::
+    [Utils.Coord]
+    -> Utils.Graph
+    -> System.Random.StdGen
+    -> (Utils.Graph, System.Random.StdGen)
+  {- Arity: 3, Strictness: <L,U><L,1*U><L,U>m, Inline: [0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: [Utils.Coord])
+                   (w1 :: Utils.Graph)
+                   (w2 :: System.Random.StdGen) ->
+                 case Algorithm.Sidewinder.$wpickRand
+                        w
+                        w1
+                        w2 of ww { (#,#) ww1 ww2 ->
+                 (ww1, ww2) }) -}
+ce29d9b6503fec7aca41aff21d509b4e
+  row ::
+    (GHC.Types.Int, GHC.Types.Int)
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> Utils.Graph
+    -> [Utils.Coord]
+    -> System.Random.StdGen
+    -> (Utils.Graph, System.Random.StdGen)
+  {- Arity: 6,
+     Strictness: <S(S(S)L),1*U(1*U(U),A)><S(S),1*U(U)><L,U(U)><L,1*U><L,U><L,U>m,
+     Inline: [0],
+     Unfolding: InlineRule (6, True, False)
+                (\ (w :: (GHC.Types.Int, GHC.Types.Int))
+                   (w1 :: GHC.Types.Int)
+                   (w2 :: GHC.Types.Int)
+                   (w3 :: Utils.Graph)
+                   (w4 :: [Utils.Coord])
+                   (w5 :: System.Random.StdGen) ->
+                 case w of ww { (,) ww1 ww2 ->
+                 case ww1 of ww3 { GHC.Types.I# ww4 ->
+                 case w1 of ww5 { GHC.Types.I# ww6 ->
+                 case Algorithm.Sidewinder.$wrow
+                        ww4
+                        ww6
+                        w2
+                        w3
+                        w4
+                        w5 of ww7 { (#,#) ww8 ww9 ->
+                 (ww8, ww9) } } } }) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

@@ -1,0 +1,6 @@
+Configuring disjoint-set-0.2...
+Preprocessing library for disjoint-set-0.2..
+Building library for disjoint-set-0.2..
+[1 of 1] Compiling Data.IntDisjointSet ( Data\IntDisjointSet.hs, .stack-work\dist\5c8418a7\build\Data\IntDisjointSet.o )
+Installing library in C:\Haskell\MazeGenRelease\.stack-work\install\490d0bf0\lib\x86_64-windows-ghc-8.2.2\disjoint-set-0.2-Cw5HT2cVhprBCbCuWOfVIM
+Registering library for disjoint-set-0.2..
